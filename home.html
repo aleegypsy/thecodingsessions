@@ -28,7 +28,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" /> 
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
 <style type="text/css">
 	#mc_embed_signup{background:none; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
@@ -67,12 +68,24 @@
 <!-- CODE, LAYOUT AND THEME DESIGNED BY THE CODING SESSIONS -->
 
 <body>
+
+        <div class="my-paroller" 
+        data-paroller-factor="0.4" 
+        data-paroller-factor-xs="0.2" 
+        data-paroller-factor-sm="0.3" 
+        data-paroller-type="foreground" 
+        data-paroller-direction="horizontal"
+    ></div>
+    
+    <!-- b) select element -->  
+    <div class="my-element"></div>  
 <!-- Navigation -->
         <!-- Bootstrap 4 Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-bg fixed-top ">
+        <nav class="navbar navbar-expand-lg navbar-bg fixed-top">
         <a class="navbar-brand" href="#">
             <img alt="Logo" src="assets/images/logo/Codingsessionsnavbrand.png" style="height: 66px;">
-        </a>    
+        </a>   
+         
           <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -99,13 +112,16 @@
             
         </div>
         </nav>
-
+        
 
 <header>
 <!-- Header Image -->
+
 <div class="header-img">
 </div>
+
     <div class="container-fluid callout-container" id="section-one">
+          
         <div class="opaque-overlay"></div>
         <!-- Callout -->
         <div class="row">
@@ -126,7 +142,7 @@
 </header> 
 
 <!-- Who We Are -->
-<section id="about">
+<section class="fadein" id="about">
         <!-- Row -->
         <div class="row no-gutters">
 <div class="col container-wrapper--whoweare-col1 colhover">
@@ -156,7 +172,7 @@
 </section>
 
 <!-- Subscribe -->
-<section class="container-fluid subscribe-content-container">
+<section class="container-fluid subscribe-content-container fadein">
     <div class="row">
         <div class="col">
                 <h2 class="contact-heading">SUBSCRIBE TO OUR MAILING LIST</h2>
@@ -185,9 +201,9 @@
 </section>
 
 <!-- What We Do -->
-<section class="container-fluid fadein" id="whatwedo">
+<section class="container-fluid" id="whatwedo">
  <!-- Row -->
- <div class="row">
+ <div class="row fadein">
         <!-- Column 1 -->
         <div class="col-md main-container"> 
                 <section class="jumbotron text-center">
@@ -208,7 +224,7 @@
 
 <!-- Services -->
                     <!-- Row 1 -->
-<div class="row whatwedo-content-container">
+<div class="row whatwedo-content-container fadein">
         <div class="col-md"> 
                 <div class="whatwedo-content">
                      
@@ -220,9 +236,8 @@
          </div>
 </div>
                     <!-- Row 2 -->
-                    <div class="row">
-                            <!-- Col 1-->
-                           
+                    <div class="row fadein">
+                            <!-- Col 1-->    
      <div class="col-sm colhover container-wrapper--learncode">
         <div class="feature">
             <section class="jumbotron text-center">
@@ -230,8 +245,7 @@
                     </section> 
         </div>
     </div>
-                              <!-- Col 2-->
-    
+                              <!-- Col 2-->  
     <div class="col-sm colhover container-wrapper--training">
         <div class="feature">
             <section class="jumbotron text-center">
@@ -241,7 +255,6 @@
     </div>
       
     <!-- Col 3-->
-    
     <div class="col-sm colhover container-wrapper--facebook">
         <div class="feature">
             <section class="jumbotron text-center">
@@ -448,6 +461,7 @@
 
   </footer>
 
+  <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-circle-up"></i></a>
   <!-- Scripts --> 
 <script src="assets/js/jquery.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
