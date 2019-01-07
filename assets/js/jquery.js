@@ -15,6 +15,9 @@ $(document).ready(function() {
     });
 });
 
+// fadein jumbotron
+  $(".opening").hide().fadeIn(2000);
+
 //cookies
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
@@ -36,8 +39,10 @@ window.cookieconsent.initialise({
       }
     })});
 
-  // fadein jumbotron
-  $(".opening").hide().fadeIn(2000);
-
-  
- 
+  // scroll down button
+  $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });

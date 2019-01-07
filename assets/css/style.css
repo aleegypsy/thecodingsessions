@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,200,300,400,500,600,700|Herr+Von+Muellerhoff:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
 
 /*-----------------------------------------Body */
 
@@ -10,12 +10,80 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     margin-top: 90px; /*-------Bring header image down so fixed nav doesn't cover half pic when window is resized-----*/
-
+    color: #8d8a8a;
+    background: url('../images/container-background/bodybgmain2.png') no-repeat center center fixed;
 }
 
 .uppercase{
     text-transform: uppercase;
 }
+
+/*--- Scroll Down Button -- */
+.scrollbutton {
+    height: 20vh;
+    width: 100%;
+    
+  }
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+  }
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #FFF;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  
+  .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 6px);
+      transform: rotate(-45deg);
+      display: block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid white;
+      border-width: 0px 0 2px 2px;
+  }
+
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+
 
 /*----- Main Text Header -----*/
 .main-container {
@@ -23,7 +91,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 
 .mainheaderbg {
@@ -40,6 +107,7 @@ body {
     padding: 10px;
     margin-top: 10ex;
 }
+
 
 .servicesheader {
     font-family: 'Open Sans Condensed', sans-serif;
@@ -82,7 +150,7 @@ body {
 
 
 .callout-container {
-    height: 100vh;
+    height: 95vh;
     background: url('../images/header/idheader.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -107,7 +175,6 @@ body {
     background-color: #615650;
     padding: 30px;
 }
-
 
 /*----- Jumbotron -----*/
 
@@ -204,7 +271,7 @@ body {
 }
 
 .container-wrapper--contact-main {
-    background: url('../images/container-background/getintouchmain.png') no-repeat center center fixed;
+    background: url('../images/container-background/getintouchmain2.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -222,9 +289,12 @@ body {
 /*----- Container Padding -----*/
 
 .whatwedo-content-container,
-.whatwedo2-content-container,
-.contact-content-container{
+.whatwedo2-content-container{
     padding: 95px 40px 95px 40px;
+}
+
+.subscribe-content-container{
+    padding: 105px 40px 105px 40px;
 }
 
 .about-content-container{
@@ -251,12 +321,12 @@ body {
 /*----------------------------------------- MODAL STYLING */
     
 .modal-body{
-    color: #615650;  
+    color: #494949;  
     text-align: center;
 }
 
 .modal-content{
-    background-color: #bbb6c1; 
+    background-color: #b3a2a2; 
     padding: 20px; 
 }
 
@@ -325,6 +395,8 @@ textarea[type=text] {
         margin-top: 0;
     }
 }
+
+    
 
 
 /*-----------------------------------------Navbar */
@@ -479,7 +551,6 @@ button:focus {
 .whatwedo-content{
     text-align: center; 
     padding: 20px;
-    color: #8d8a8a;
     font-size: 120%
 }
 
@@ -490,7 +561,7 @@ button:focus {
     margin-bottom: 40px;
 }
 
-.col1:hover {
+div.colhover:hover {
     opacity: 0.6;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -498,23 +569,20 @@ button:focus {
     -o-transition: all 0.35s ease-in-out; 
 }
 
-.col2:hover {
-    opacity: 0.6;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out; 
+.feature-link{
+    color: #bbb6c1;
 }
 
-.col3:hover {
+.feature-link:hover{
+    color: #bbb6c1;
     opacity: 0.6;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out; 
+    text-decoration: none; 
 }
 
-
+.feature-link:focus{
+    color: #bbb6c1;
+    outline: 0;
+}
 /*-----------------------------------------Contact*/
 
 .contact-heading {
@@ -568,7 +636,7 @@ footer{
     line-height: 10px;
     text-align: center;
     color: #fafafa;
-    background: #ccb6c3;
+    background: #757075;
      
 }
 
@@ -610,6 +678,17 @@ footer{
 }
 
 .copyright a:hover {
+    color: #928e87;
+    text-decoration: none;
+}
+
+.copyright2{
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #756975;
+}
+
+.copyright2 a:hover {
     color: #928e87;
     text-decoration: none;
 }
