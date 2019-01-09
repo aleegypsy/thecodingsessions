@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,200,300,400,500,600,700|Herr+Von+Muellerhoff:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,200,300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
 
 /*-----------------------------------------Body */
 
@@ -13,12 +13,14 @@ body {
     color: #8d8a8a;
     background: url('../images/container-background/bodybgmain2.png') no-repeat center center fixed;
 
-
 }
 
 .uppercase{
     text-transform: uppercase;
 }
+  
+
+
 
 /*--- Scroll Down Button -- */
 .scrollbutton {
@@ -150,7 +152,7 @@ body {
 /*-----------------------------------------Header Image */
 
 
-.callout-container {
+.calloutcontainer {
     height: 95vh;
     background: url('../images/header/idheader.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -221,6 +223,7 @@ body {
 
 .container-wrapper--whoweare-col2 {
     background: url('../images/container-background/meetaleethefounder.png') no-repeat center center;
+    background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -230,7 +233,37 @@ body {
 
 .container-wrapper--alee {
     background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
-    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 70vh;
+    max-width: 100%;
+}
+
+.container-wrapper--alee1 {
+    background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
+    background-color: rgb(0, 0, 0);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 350px;
+}
+
+.container-wrapper--alee2 {
+    background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
+    background-color: rgb(0, 0, 0);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 350px;
+}
+
+.container-wrapper--alee3 {
+    background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
+    background-color: rgb(0, 0, 0);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -271,7 +304,7 @@ body {
     background-size: cover;
 }
 
-.container-wrapper--contact-main {
+.contactmain {
     background: url('../images/container-background/getintouchmain2.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -294,13 +327,17 @@ body {
     padding: 95px 40px 95px 40px;
 }
 
+.whoweare-content-container{
+    background-color: rgb(241, 241, 241);
+}
+
 .subscribe-content-container{
     padding: 105px 40px 105px 40px;
 }
 
 .about-content-container{
-    padding: 30px;
-    background-color: rgb(168, 160, 160);
+    background-color: rgb(241, 241, 241);
+    padding: 95px 40px 95px 40px;
 }
 
 .features {
@@ -345,6 +382,10 @@ body {
 .btn-dark:hover{
     color: rgb(237, 227, 222);
     background-color: rgb(89, 89, 89);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
 
 .btn-dark:active:focus{
@@ -473,30 +514,26 @@ button:focus {
 
 /*----- ABOUT PAGE -----*/
 
-.about-heading{
+.about-heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: bold;
+        color: #dbc7bd;
+        margin: auto;
+        padding-bottom: 20px;
+    
+}
+
+.about-heading2 {
     text-transform: uppercase;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
-    color: #dbc7bd;
+    color: #bdb2be;
     margin: auto;
     padding-bottom: 50px;
-    
-}
 
-.bio-content{
-    text-align: left;   
-    font-weight: bold;
-    font-size: medium;
-    padding: 20px;
-    color: #e6e6e6;
-}
-
-.brand-content{
-    text-align: center;   
-    font-weight: bold;
-    font-size: medium;
-    color: #4a4b4d;
 }
 
 .ouressence li{
@@ -521,10 +558,50 @@ button:focus {
 }
 
 
+/*----- About Alee ----- */
+
+.aleecol1,
+.aleecol2,
+.aleecol3,
+.aleecol4,
+.aleecol5,
+.aleecol6,
+.aleecol7 {
+background-color: #FFF;
+}
+
+.aleecol2 {
+    background: url('../images/container-background/aboutalee.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 250px;
+}
+
+.aleecol3 {
+    background: url('../images/container-background/aboutalee.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 250px; 
+}
+
+.aleecol6 {
+    background: url('../images/container-background/aboutalee.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 250px; 
+}
+
 .aboutalee {
     text-align: center;
     margin-bottom: 40px;
 }
+
 
 
 /*-----------------------------------------WHAT WE DO SECTION */
