@@ -149,6 +149,22 @@ body {
     height: auto;
   }
 
+
+.bodylink{
+    color: #bbb6c1;
+}
+
+.bodylink:hover{
+    color: #bbb6c1;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.bodylink:focus{
+    color: #bbb6c1;
+    outline: 0;
+}
+
 /*-----------------------------------------Header Image */
 
 
@@ -313,11 +329,17 @@ body {
     background-color: #e0d4df;
 }
 
-.whoweare-content-container{
+.whoweare-content-container,
+.contactbackground {
     background-color: rgb(241, 241, 241);
 }
 
 .whoweare-content-container2{
+    background-color: rgb(255, 255, 255);    
+    padding: 55px 40px 55px 40px;
+}
+
+.mentorship-container{
     background-color: rgb(255, 255, 255);    
     padding: 55px 40px 55px 40px;
 }
@@ -562,7 +584,10 @@ background-color: #FFF;
 padding: 50px 40px 50px 40px;
 }
 
-
+.aleecol2 {
+    background-color: #FFF;
+    margin-top: 150px;
+    }
 
 
 /*-----------------------------------------WHAT WE DO SECTION */
@@ -593,6 +618,23 @@ padding: 50px 40px 50px 40px;
     font-size: 120%
 }
 
+.whatwedo-content2{
+    text-align: center; 
+    padding: 20px;
+    font-size: 150%
+}
+
+.mentorship-content{
+    text-align: center; 
+    padding: 20px;
+    font-size: 130%
+}
+
+.mentorship-content2{
+    text-align: center; 
+    padding: 20px;
+    text-align: left;
+}
 /*----- Featured Services -----*/
 
 .feature {
