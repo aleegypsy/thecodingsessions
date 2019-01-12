@@ -353,6 +353,10 @@ body {
     padding: 105px 40px 105px 40px;
 }
 
+.subscribe-content-container2{
+    padding: 120px 100px 120px 100px;
+}
+
 .about-content-container{
     background-color: rgb(241, 241, 241);
     padding: 95px 40px 95px 40px;
@@ -524,6 +528,11 @@ button:focus {
 .nav-link:focus{
     color: #bbb6c1;
     outline: 0;
+}
+
+.dropdown-menu {
+    background-color:  #000000;
+    border-radius: 0%;
 }
 
 
