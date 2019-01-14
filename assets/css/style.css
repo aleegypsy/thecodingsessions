@@ -1,3 +1,10 @@
+/*!
+ * The Coding Sessions - Original Theme Dark
+ * Copyright 2019
+ * Created by The Coding Sessions
+ */
+
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,200,300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
 
 /*-----------------------------------------Body */
@@ -11,7 +18,6 @@ body {
     text-align: center;
     margin-top: 70px; /*-------Bring header image down so fixed nav doesn't cover half pic when window is resized-----*/
     color: #8d8a8a;
-    background: url('../images/container-background/bodybgmain2.png') no-repeat center center fixed;
 
 }
 
@@ -19,8 +25,6 @@ body {
     text-transform: uppercase;
 }
   
-
-
 
 /*--- Scroll Down Button -- */
 .scrollbutton {
@@ -43,7 +47,8 @@ body {
     display: block;
     width: 32px;
     height: 32px;
-    border: 2px solid #FFF;
+    border: 2px solid rgb(94, 94, 94);
+    background-color: rgb(94, 94, 94);
     background-size: 14px auto;
     border-radius: 50%;
     z-index: 2;
@@ -62,7 +67,7 @@ body {
       width: 12px;
       height: 12px;
       content: "";
-      border: 2px solid white;
+      border: 2px solid rgb(255, 255, 255);
       border-width: 0px 0 2px 2px;
   }
 
@@ -88,29 +93,48 @@ body {
     }
   }
 
-
-/*----- Main Text Header -----*/
-.main-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+/*--- Scroll Up Button -- */
+  #return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: rgb(94, 94, 94);
+    margin: 0;
     position: relative;
-}
-
-.mainheaderbg {
-    background-color: #000000;
-    padding: 30px;
-}
-
-.mainheaderbg1 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    color: #ab9eb3;
+    left: 16px;
+    top: 13px;
     font-size: 30px;
-    background-color: #000000;
-    padding: 10px;
-    margin-top: 10ex;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
+
+#return-to-top:hover i {
+    color: rgb(94, 94, 94);
+    top: 5px;
+}
+
+
+
+/*----- Main Page -----*/
 
 
 .servicesheader {
@@ -125,18 +149,64 @@ body {
     margin-left: 5ex;
 }
 
+.main-header-big {
+    color:  #b3a2a2;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 40px;
+    font-size: 130%;
+    }
 
+.main-header {
+    color:  #b3a2a2;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 40px;
+    }
 
-.mainsection {
-    color: #ebebeb;
-    font-style: italic;
-    background-color: #746a77;
-    padding: 30px;
-    margin-top: -80px;
-    margin-right: 60px;
-    margin-left: 60px;
-}
+    .main-header-coding {
+        color:  #b3a2a2;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: bold;
+        margin: auto;
+        padding-bottom: 40px;
+        font-size: 2.7em;
+        }    
 
+.main-header-left {
+    color:  #b3a2a2;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 20px;
+    
+    }
+    
+    .main-header-left::before {
+    content: "";
+    border-left: 3rem solid black;
+    width: 4rem;
+    height: 45px;
+    border-left: solid 7px #685d66;
+    margin-right: 20px;
+    }
+  
+    .block-divider-main {
+        width: 75px;
+        height: 5px;
+        border: 0;
+        background-color:  #685d66;
+    }        
 
 
 /*-------Fade in each section on scroll-----*/
@@ -144,12 +214,13 @@ body {
     opacity:0.2;
 }
 
+/*-------responsive image-----*/
 .responsive {
     max-width: 100%;
     height: auto;
   }
 
-
+/*-------main page links-----*/
 .bodylink{
     color: #bbb6c1;
 }
@@ -228,25 +299,7 @@ body {
 
 /*-----------------------------------------Container Background */
 /*----- Front page who we are column -----*/
-.container-wrapper--whoweare-col1 {
-    background: url('../images/container-background/aboutcolbg.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 
-}
-
-/*----- Front page meet the founder column -----*/
-.container-wrapper--whoweare-col2 {
-    background: url('../images/container-background/meetaleethefounder.png') no-repeat center center;
-    background-color: #FFF;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-}
 
 /*----- About Page Alee Header -----*/
 .container-wrapper--alee {
@@ -282,29 +335,6 @@ body {
     
 }
  
-.container-wrapper--learncode {
-    background: url('../images/container-background/learncode.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.container-wrapper--training {
-    background: url('../images/container-background/training.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.container-wrapper--facebook {
-    background: url('../images/container-background/facebookgroup.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
 .contactmain {
     background: url('../images/container-background/getintouchmain2.png') no-repeat center center fixed;
@@ -349,8 +379,9 @@ body {
     padding: 55px 40px 55px 40px;
 }
 
-.subscribe-content-container{
+.subscribe-bg{
     padding: 105px 40px 105px 40px;
+    background-color: rgb(223, 221, 221);
 }
 
 .subscribe-content-container2{
@@ -377,6 +408,102 @@ body {
      }
   }
    
+
+
+/*-----------------------------------------COLUMN BACKGROUND */
+/*------ Front Page About Us Section Left Column */
+.about-us-col-bg-0 {
+    background-color: rgb(0, 0, 0);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-us-col-text-0{
+    color: #cacaca;
+}
+
+.about-us-col-padding {
+    padding: 95px 60px 95px 60px;
+    
+}
+
+.btn-light{
+    background-color: rgb(0, 0, 0);
+    color: rgb(237, 227, 222);
+    border: 2px solid #e7e7e7;
+    padding: 25px;
+    margin: auto;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(237, 227, 222);
+    border: 2px solid #e7e7e7;
+    padding: 25px;
+    margin: auto;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-light:active:focus{
+    color: rgb(237, 227, 222);
+    background-color: rgb(89, 89, 89);
+}
+
+
+
+/*------ Front Page About Us Section */
+.about-us-col-bg-1 {
+    background: url('../images/column-background/aboutuscolimg.png') no-repeat center center;
+    height: 40vmax;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.about-us-col-bg-2 {
+background: url('../images/container-background/meetaleethefounder.png') no-repeat center center;
+height: 40vmax;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+/*------ Intermission Column */
+
+.intermission-bg {
+    background-color: rgb(223, 221, 221);
+}
+
+/*------ Philosophies Row */
+
+.philosophies-bg {
+    background-color: rgb(223, 221, 221);
+    padding: 95px 90px 95px 90px;
+}
+
+.philosophies-icon {
+    font-size: 120px;
+    color: #000000;
+}
+
+
+
 
 /*----------------------------------------- MODAL STYLING */
     
@@ -533,9 +660,12 @@ button:focus {
 .dropdown-menu {
     background-color:  #000000;
     border-radius: 0%;
+    padding: 20px;
 }
 
-
+.dropdown-item:hover {
+    background-color:  #000000;
+}
 
 /*-----------------------------------------WHO WE ARE SECTION */
 
@@ -561,10 +691,6 @@ button:focus {
     margin: auto;
     padding-bottom: 50px;
 
-}
-
-.ouressence li{
-    list-style-type: none;
 }
 
 .caption{
@@ -644,13 +770,40 @@ padding: 50px 40px 50px 40px;
     padding: 20px;
     text-align: left;
 }
-/*----- Featured Services -----*/
 
-.feature {
-    text-align: center;
-    margin-bottom: 40px;
+
+/*----------------------------------------- Featured Services -----*/
+
+/*----- Background Pics -----*/
+.learncode-bgpic {
+    background: url('../images/container-background/learncode.png') no-repeat center center;
+    padding: 120px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+.training-bgpic {
+    background: url('../images/container-background/training.png') no-repeat center center;
+    padding: 120px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.facebook-bgpic {
+    background: url('../images/container-background/facebookgroup.png') no-repeat center center;
+    padding: 120px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*----- Column Hover -----*/
 div.colhover:hover {
     opacity: 0.6;
     transition: all 0.35s ease-in-out;
@@ -659,20 +812,36 @@ div.colhover:hover {
     -o-transition: all 0.35s ease-in-out; 
 }
 
-.feature-link{
+
+/*----- Heading Buttons -----*/
+.btn-feature {
+    background-color: rgb(0, 0, 0);
     color: #bbb6c1;
+    border: none;
+    padding: 30px;
+    font-size: 1.8em;
+    font-weight: 800;
+    margin: auto;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
 }
 
-.feature-link:hover{
-    color: #bbb6c1;
-    opacity: 0.6;
-    text-decoration: none; 
+.btn-feature:hover{
+    color: rgb(204, 194, 188);
+    background-color: rgb(89, 89, 89);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
 
-.feature-link:focus{
-    color: #bbb6c1;
-    outline: 0;
+.btn-feature:active:focus{
+    color: rgb(204, 194, 188);
+    background-color: rgb(89, 89, 89);
 }
+
+
 /*-----------------------------------------Contact*/
 
 .contact-heading {
@@ -691,6 +860,7 @@ div.colhover:hover {
     font-size: medium;
     color: #4a4b4d;
 }
+
 
 /*-----------------------------------------Footer*/
 
@@ -784,40 +954,3 @@ footer{
 }
 
 
-
-#return-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    display: block;
-    text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-#return-to-top i {
-    color: #fff;
-    margin: 0;
-    position: relative;
-    left: 16px;
-    top: 13px;
-    font-size: 30px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#return-to-top:hover i {
-    color: #fff;
-    top: 5px;
-}
