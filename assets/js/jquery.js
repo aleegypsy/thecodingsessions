@@ -39,17 +39,24 @@ window.cookieconsent.initialise({
       }
     })});
 
-  // scroll down button
-  $(function() {
-    $('.scroll-down').click (function() {
-      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
-      return false;
-    });
-  });
+    
+//scroll down
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });    
 
   
  // hide navbar on scroll 
-
   $(function () {
     var lastScrollTop = 0;
     var $navbar = $('.navbar');
@@ -102,7 +109,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 // parallax effect
 (function(){
 
-  var parallax = document.querySelectorAll("body, calloutcontainer"),
+  var parallax = document.querySelectorAll("header-image"),
       speed = 0.1;
 
   window.onscroll = function(){
@@ -118,3 +125,16 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 
 })();
 
+// transparent to solid navbar
+
+$(document).ready(function() {
+  // Transition effect for navbar 
+  $(window).scroll(function() {
+    // checks if window is scrolled more than 500px, adds/removes solid class
+    if($(this).scrollTop() > 500) { 
+        $('.navbar').addClass('solid');
+    } else {
+        $('.navbar').removeClass('solid');
+    }
+  });
+});

@@ -15,8 +15,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin-top: 70px; /*-------Bring header image down so fixed nav doesn't cover half pic when window is resized-----*/
+    text-align: center; /*-------Bring header image down so fixed nav doesn't cover half pic when window is resized-----*/
     color: #8d8a8a;
 
 }
@@ -27,72 +26,15 @@ body {
   
 
 /*--- Scroll Down Button -- */
-.scrollbutton {
-    height: 20vh;
-    width: 100%;
-    
+.ct-btn-scroll {
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-size: 2em;
   }
 
-.scroll-down {
-    opacity: 1;
-    -webkit-transition: all .5s ease-in 3s;
-    transition: all .5s ease-in 3s;
-  }
-  
-  .scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    margin-left: -16px;
-    display: block;
-    width: 32px;
-    height: 32px;
-    border: 2px solid rgb(94, 94, 94);
-    background-color: rgb(94, 94, 94);
-    background-size: 14px auto;
-    border-radius: 50%;
-    z-index: 2;
-    -webkit-animation: bounce 2s infinite 2s;
-    animation: bounce 2s infinite 2s;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-  }
-  
-  .scroll-down:before {
-      position: absolute;
-      top: calc(50% - 8px);
-      left: calc(50% - 6px);
-      transform: rotate(-45deg);
-      display: block;
-      width: 12px;
-      height: 12px;
-      content: "";
-      border: 2px solid rgb(255, 255, 255);
-      border-width: 0px 0 2px 2px;
-  }
-
-  @keyframes bounce {
-    0%,
-    100%,
-    20%,
-    50%,
-    80% {
-      -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-      transform: translateY(0);
-    }
-    40% {
-      -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-    60% {
-      -webkit-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-      transform: translateY(-5px);
-    }
-  }
-
+.ct-btn-scroll:hover {
+    color: rgb(94, 94, 94);
+}
   
 /*--- Scroll Up Button -- */
   #return-to-top {
@@ -114,7 +56,7 @@ body {
     transition: all 0.3s ease;
 }
 #return-to-top i {
-    color: rgb(94, 94, 94);
+    color: rgb(255, 255, 255);
     margin: 0;
     position: relative;
     left: 16px;
@@ -200,7 +142,8 @@ body {
     border-left: solid 7px #685d66;
     margin-right: 20px;
     }
-  
+
+
     .block-divider-main {
         width: 75px;
         height: 5px;
@@ -236,20 +179,177 @@ body {
     outline: 0;
 }
 
+/*---- Vertical Stacking between columns */ 
+
+.row.row-grid [class*="col-"] + [class*="col-"] {
+    margin-top: 15px;
+}
+
+@media (min-width: 1200px) {
+    .row.row-grid [class*="col-lg-"] + [class*="col-lg-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 992px) {
+    .row.row-grid [class*="col-md-"] + [class*="col-md-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 768px) {
+    .row.row-grid [class*="col-sm-"] + [class*="col-sm-"] {
+        margin-top: 0;
+    }
+}
+
+/*--------------------------------------- Buttons */
+/*---- Light */
+
+.btn-light{
+    background-color: transparent;
+    color: rgb(237, 227, 222);
+    border: 2px solid #e7e7e7;
+    padding: 20px;
+    margin: auto;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    background-color: transparent;
+    color: rgb(237, 227, 222);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.btn-light:active:focus{
+    background-color: transparent;
+    background-color: rgb(89, 89, 89);
+}
+
+/*---- Dark */
+
+.btn-dark{
+    background-color: rgb(41, 40, 40);
+    border: 1px solid white;
+    color: rgb(237, 227, 222);
+    border: none;
+    padding: 25px;
+    margin: auto;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
+}
+
+.btn-dark:hover{
+    color: rgb(237, 227, 222);
+    background-color: rgb(89, 89, 89);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.btn-dark:active:focus{
+    color: rgb(237, 227, 222);
+    background-color: rgb(89, 89, 89);
+}
+
+
+/*-----------------------------------------Navbar */
+
+.navbar-bg{
+    background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: medium;
+}
+
+.navbar-brand:hover{
+    opacity: 0.6;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;     
+}
+
+.navbar-nav li a{
+    color: #928e87 !important;
+}
+
+.navbar-nav li a:hover{
+    opacity: 0.6;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;     
+}
+
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(161, 161, 161, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgba(161, 161, 161, 1);
+} 
+
+.custom-toggler.navbar-toggler:hover {
+    opacity: 0.8;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+} 
+
+button:focus { 
+    outline:0 !important; 
+}
+
+.nav-link{
+    color: #bbb6c1;
+    font-size: large;
+}
+
+.nav-link:hover{
+    color: #bbb6c1;
+    opacity: 0.6;
+}
+
+.nav-link:focus{
+    color: #bbb6c1;
+    outline: 0;
+}
+
+
+
+/* Solid class attached on scroll past first section */
+
+.navbar.solid {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 1s ease 0s;
+  
+  }
+  
+ 
 /*-----------------------------------------Header Image */
 
 
-.calloutcontainer {
-    height: 95vh;
-    background: url('../images/header/idheader.jpg') no-repeat center center fixed;
+.header-image {
+    background: url('../images/header/main-header.jpg') no-repeat center center fixed;
+    height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+
 }
 
 .opaque-overlay {
@@ -258,11 +358,11 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.753);
 }
 
 .opening {
-    background-color: #746a77;
+    background-color: transparent;
     padding: 30px;
 }
 
@@ -270,20 +370,23 @@ body {
 
 .jumbotron {
     background-color: transparent;
+    margin-top: 12em;
 }
 
 .jumbotron h1 {
-    color: #dbc7bd;
+    color: rgb(190, 174, 174);
     margin-bottom: 30px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
+    font-size: 5em;
 }
 
 .jumbotron .lead {
-    color: #ebebeb;
+    color: #999090;
     margin: 25px 0;
-    font-family: 'Poppins', sans-serif;
-    font-style: italic;
+    font-weight: 800;
+    letter-spacing: 2pt
+    
 }
 
 
@@ -374,14 +477,11 @@ body {
     padding: 55px 40px 55px 40px;
 }
 
-.whoweare-content-container3{
-    background-color: rgb(226, 224, 226);    
-    padding: 55px 40px 55px 40px;
-}
+
 
 .subscribe-bg{
     padding: 105px 40px 105px 40px;
-    background-color: rgb(223, 221, 221);
+    background-color: rgb(216, 213, 213);
 }
 
 .subscribe-content-container2{
@@ -408,10 +508,21 @@ body {
      }
   }
    
+/*----------------------------------------- Philosophies Row */
 
+.philosophies-bg {
+    background-color: rgb(216, 213, 213);
+    padding: 95px 90px 95px 90px;
+}
 
-/*-----------------------------------------COLUMN BACKGROUND */
+.philosophies-icon {
+    font-size: 120px;
+    color: #000000;
+}
+
+/*-----------------------------------------ABOUT US MAINx */
 /*------ Front Page About Us Section Left Column */
+
 .about-us-col-bg-0 {
     background-color: rgb(0, 0, 0);
     -webkit-background-size: cover;
@@ -425,124 +536,27 @@ body {
 }
 
 .about-us-col-padding {
-    padding: 95px 60px 95px 60px;
+    padding: 55px 40px 55px 40px;
     
 }
 
-.btn-light{
-    background-color: rgb(0, 0, 0);
-    color: rgb(237, 227, 222);
-    border: 2px solid #e7e7e7;
-    padding: 25px;
-    margin: auto;
-    text-transform: uppercase;    
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.btn-light:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(237, 227, 222);
-    border: 2px solid #e7e7e7;
-    padding: 25px;
-    margin: auto;
-    text-transform: uppercase;    
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.btn-light:active:focus{
-    color: rgb(237, 227, 222);
-    background-color: rgb(89, 89, 89);
-}
-
-
-
-/*------ Front Page About Us Section */
-.about-us-col-bg-1 {
-    background: url('../images/column-background/aboutuscolimg.png') no-repeat center center;
-    height: 40vmax;
+.meetalee-bg {
+    background: url('../images/column-background/meetaleethefounder.png') no-repeat center center;
+    height: 50vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
-.about-us-col-bg-2 {
-background: url('../images/container-background/meetaleethefounder.png') no-repeat center center;
-height: 40vmax;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+.aboutus-bg {
+    background: url('../images/column-background/aboutuscolimg.png') no-repeat center center;
+    height: 50vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-
-/*------ Intermission Column */
-
-.intermission-bg {
-    background-color: rgb(223, 221, 221);
-}
-
-/*------ Philosophies Row */
-
-.philosophies-bg {
-    background-color: rgb(223, 221, 221);
-    padding: 95px 90px 95px 90px;
-}
-
-.philosophies-icon {
-    font-size: 120px;
-    color: #000000;
-}
-
-
-
-
-/*----------------------------------------- MODAL STYLING */
-    
-.modal-body{
-    color: #494949;  
-    text-align: center;
-}
-
-.modal-content{
-    background-color: #b3a2a2; 
-    padding: 20px; 
-}
-
-.btn-dark{
-    background-color: rgb(41, 40, 40);
-    color: rgb(237, 227, 222);
-    border: none;
-    padding: 25px;
-    margin: auto;
-    text-transform: uppercase;    
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0px;
-}
-
-.btn-dark:hover{
-    color: rgb(237, 227, 222);
-    background-color: rgb(89, 89, 89);
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.btn-dark:active:focus{
-    color: rgb(237, 227, 222);
-    background-color: rgb(89, 89, 89);
-}
-
-
 
 
 /*-----------------------------------------Form Controls */
@@ -553,10 +567,11 @@ background-size: cover;
 }
 
 input[type=text] {
+    background-color: rgb(233, 229, 225);
     margin: 0px;
     border-style: solid;
     border-width: 1px;  
-    border-color: #ede3de; 
+    border-color: #ffffff; 
     border-radius:0px;
     width: 100%;
 }
@@ -565,18 +580,27 @@ input[type=email] {
     margin: 0px;
     border-style: solid;
     border-width: 1px;  
-    border-color: #ede3de; 
+    border-color: #ffffff; 
     border-radius:0px;
     width: 100%;
 }
 
 textarea[type=text] {
+    background-color: rgb(233, 229, 225);
     margin: 0px;
     text-indent: 0.05em;
     border-style: solid;  
     border-width: 1px;  
-    border-color: #ede3de; 
+    border-color: #ffffff; 
     border-radius:0px;
+}
+
+input[type=text]:focus {
+    background-color: rgb(233, 229, 225);
+}
+
+textarea[type=text]:focus {
+    background-color: rgb(233, 229, 225);    
 }
 
 
@@ -587,85 +611,6 @@ textarea[type=text] {
     }
 }
 
-    
-
-
-/*-----------------------------------------Navbar */
-
-.navbar-bg{
-    background-color: #000000;
-    border: 0;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.1em;
-    font-size: medium;
-}
-
-.navbar-brand:hover{
-    opacity: 0.6;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;     
-}
-
-.navbar-nav li a{
-    color: #928e87 !important;
-}
-
-.navbar-nav li a:hover{
-    opacity: 0.6;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;     
-}
-
-
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(161, 161, 161, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-    border-color: rgba(161, 161, 161, 1);
-} 
-
-.custom-toggler.navbar-toggler:hover {
-    opacity: 0.8;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-} 
-
-button:focus { 
-    outline:0 !important; 
-}
-
-.nav-link{
-    color: #bbb6c1;
-    font-size: large;
-}
-
-.nav-link:hover{
-    color: #bbb6c1;
-    opacity: 0.6;
-}
-
-.nav-link:focus{
-    color: #bbb6c1;
-    outline: 0;
-}
-
-.dropdown-menu {
-    background-color:  #000000;
-    border-radius: 0%;
-    padding: 20px;
-}
-
-.dropdown-item:hover {
-    background-color:  #000000;
-}
 
 /*-----------------------------------------WHO WE ARE SECTION */
 
@@ -710,6 +655,7 @@ button:focus {
     color: #c6b0b3;
     font-size: larger;
 }
+
 
 
 /*----- About Alee ----- */
@@ -774,32 +720,53 @@ padding: 50px 40px 50px 40px;
 
 /*----------------------------------------- Featured Services -----*/
 
-/*----- Background Pics -----*/
-.learncode-bgpic {
-    background: url('../images/container-background/learncode.png') no-repeat center center;
-    padding: 120px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.features-container{
+    background-color: rgb(0, 0, 0);    
+    padding: 60px 40px 60px 40px;
 }
 
-.training-bgpic {
-    background: url('../images/container-background/training.png') no-repeat center center;
-    padding: 120px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+/*----- Heading Buttons -----*/
+.btn-light-feature{
+    background-color: transparent;
+    color: rgb(237, 227, 222);
+    border: 2px solid #e7e7e7;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    border-radius: 0px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.facebook-bgpic {
-    background: url('../images/container-background/facebookgroup.png') no-repeat center center;
-    padding: 120px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.btn-light-feature:hover {
+    color: rgb(237, 227, 222);
+    border: 2px solid #e7e7e7;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.btn-light-feature:active:focus{
+    color: rgb(237, 227, 222);
+    background-color: rgb(89, 89, 89);
+}
+
+.btn-position .btn-light-feature{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
 }
 
 
@@ -812,34 +779,6 @@ div.colhover:hover {
     -o-transition: all 0.35s ease-in-out; 
 }
 
-
-/*----- Heading Buttons -----*/
-.btn-feature {
-    background-color: rgb(0, 0, 0);
-    color: #bbb6c1;
-    border: none;
-    padding: 30px;
-    font-size: 1.8em;
-    font-weight: 800;
-    margin: auto;
-    text-transform: uppercase;    
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0px;
-}
-
-.btn-feature:hover{
-    color: rgb(204, 194, 188);
-    background-color: rgb(89, 89, 89);
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.btn-feature:active:focus{
-    color: rgb(204, 194, 188);
-    background-color: rgb(89, 89, 89);
-}
 
 
 /*-----------------------------------------Contact*/
@@ -861,6 +800,13 @@ div.colhover:hover {
     color: #4a4b4d;
 }
 
+.contact-main-bg {
+    background: url('../images/container-background/contact-bg.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 /*-----------------------------------------Footer*/
 
