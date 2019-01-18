@@ -106,24 +106,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
   }, 500);
 });
 
-// parallax effect
-(function(){
 
-  var parallax = document.querySelectorAll("header-image"),
-      speed = 0.1;
-
-  window.onscroll = function(){
-    [].slice.call(parallax).forEach(function(el,i){
-
-      var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-      el.style.backgroundPosition = elBackgrounPos;
-
-    });
-  };
-
-})();
 
 // transparent to solid navbar
 

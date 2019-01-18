@@ -7,7 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,200,300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
 
-/*-----------------------------------------Body */
+/*-----------------------------------------Universal properties and Body */
 
 html {
     scroll-behavior: smooth;
@@ -20,6 +20,34 @@ body {
 
 }
 
+ 
+/*----------------------------------------- Mobile and iPad devices */
+
+
+/*---- All mobile devices portrait */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+    .header-image h1 {
+        font-size: 40px!important;
+    }    
+  
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+
+/*---Text -- */
 .uppercase{
     text-transform: uppercase;
 }
@@ -37,7 +65,7 @@ font-size: 2em;
 }
   
 /*--- Scroll Up Button -- */
-  #return-to-top {
+#return-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -55,6 +83,7 @@ font-size: 2em;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+
 #return-to-top i {
     color: rgb(255, 255, 255);
     margin: 0;
@@ -76,7 +105,7 @@ font-size: 2em;
 
 
 
-/*----- Main Page -----*/
+/*----- Home Page -----*/
 
 
 .servicesheader {
@@ -99,7 +128,7 @@ font-size: 2em;
     font-weight: bold;
     margin: auto;
     padding-bottom: 40px;
-    font-size: 130%;
+    font-size: 2em;
     }
 
 .main-header {
@@ -165,7 +194,7 @@ font-size: 2em;
 
 /*-------main page links-----*/
 .bodylink{
-    color: #bbb6c1;
+    color: #6d5e70;
 }
 
 .bodylink:hover{
@@ -200,6 +229,61 @@ font-size: 2em;
         margin-top: 0;
     }
 }
+
+
+/*-----------------------------------------Form Controls */
+
+::placeholder {
+    color: grey !important;
+    text-transform: uppercase;
+}
+
+input[type=text] {
+    background-color: rgb(233, 229, 225);
+    margin: 0px;
+    border-style: solid;
+    border-width: 1px;  
+    border-color: #ffffff; 
+    border-radius:0px;
+    width: 100%;
+}
+
+input[type=email] {
+    margin: 0px;
+    border-style: solid;
+    border-width: 1px;  
+    border-color: #ffffff; 
+    border-radius:0px;
+    width: 100%;
+}
+
+textarea[type=text] {
+    background-color: rgb(233, 229, 225);
+    margin: 0px;
+    text-indent: 0.05em;
+    border-style: solid;  
+    border-width: 1px;  
+    border-color: #ffffff; 
+    border-radius:0px;
+}
+
+input[type=text]:focus {
+    background-color: rgb(233, 229, 225);
+}
+
+textarea[type=text]:focus {
+    background-color: rgb(233, 229, 225);    
+}
+
+
+@media screen and (max-width: 600px) {
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
 
 /*--------------------------------------- Buttons */
 /*---- Light */
@@ -261,10 +345,20 @@ font-size: 2em;
 }
 
 
-/*-----------------------------------------Navbar */
-
+/*----------------------------------------NAVBAR */
+/*------Navbar home page */
 .navbar-bg{
     background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: medium;
+}
+
+/*------Navbar every other page */
+.navbar-bg1{
+    background-color: #000000;
     border: 0;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
@@ -328,8 +422,6 @@ button:focus {
     outline: 0;
 }
 
-
-
 /* Solid class attached on scroll past first section */
 
 .navbar.solid {
@@ -338,19 +430,8 @@ button:focus {
   
   }
   
- 
+
 /*-----------------------------------------Header Image */
-
-
-.header-image {
-    background: url('../images/header/main-header.jpg') no-repeat center center fixed;
-    height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-}
 
 .opaque-overlay {
     position: absolute;
@@ -361,32 +442,62 @@ button:focus {
     background-color: rgba(0, 0, 0, 0.753);
 }
 
-.opening {
-    background-color: transparent;
-    padding: 30px;
+.header-image {
+    background: url('../images/header/main-header.jpg') no-repeat center center fixed;
+        /* Sizing */
+        height: 100vh;
+        width: auto;
+        /* Flexbox stuff */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
-/*----- Jumbotron -----*/
-
-.jumbotron {
-    background-color: transparent;
-    margin-top: 12em;
-}
-
-.jumbotron h1 {
+.header-image h1 {
+    /* Text styles */
     color: rgb(190, 174, 174);
     margin-bottom: 30px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
-    font-size: 5em;
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    /* Margins */
+    margin-top: 4em;  
+    margin-bottom: 0.5em;
+    background-color: #000000;
+    padding:40px;
 }
 
-.jumbotron .lead {
-    color: #999090;
-    margin: 25px 0;
+
+.header-image h4 {
+    color: #b39595;
     font-weight: 800;
-    letter-spacing: 2pt
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    margin-top: 3em;
+    padding: 40px;
     
+}
+
+.header-image .btn {
+    background-color: transparent;
+    color: rgb(237, 227, 222);
+    border: 2px solid #e7e7e7;
+    padding: 20px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-transform: uppercase;    
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
 
@@ -399,114 +510,6 @@ button:focus {
     background-color: #e5cdce;
 }
 
-
-/*-----------------------------------------Container Background */
-/*----- Front page who we are column -----*/
-
-
-/*----- About Page Alee Header -----*/
-.container-wrapper--alee {
-    background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 70vh;
-    max-width: 100%;
-}
-
-
-.container-wrapper--theartofcoding {
-    background: url('../images/container-background/theartofcoding.jpg') no-repeat center center;
-    background-color: rgb(0, 0, 0);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    max-width: 100%;
-    height: 70vh;
-}
-
-
-
-.container-wrapper--whatwedo {
-    background: url('../images/container-background/whatwedobackground.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
-}
- 
-
-.contactmain {
-    background: url('../images/container-background/getintouchmain2.png') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.container-wrapper--contact {
-    background: url('../images/container-background/contactbackground.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/*----- Container Padding -----*/
-
-.whatwedo-content-container{
-    padding: 55px 40px 55px 40px;
-    background-color: #e0d4df;
-}
-
-.whoweare-content-container,
-.contactbackground {
-    background-color: rgb(241, 241, 241);
-}
-
-.whoweare-content-container2{
-    background-color: rgb(255, 255, 255);    
-    padding: 55px 40px 55px 40px;
-}
-
-.mentorship-container{
-    background-color: rgb(255, 255, 255);    
-    padding: 55px 40px 55px 40px;
-}
-
-
-
-.subscribe-bg{
-    padding: 105px 40px 105px 40px;
-    background-color: rgb(216, 213, 213);
-}
-
-.subscribe-content-container2{
-    padding: 120px 100px 120px 100px;
-}
-
-.about-content-container{
-    background-color: rgb(241, 241, 241);
-    padding: 95px 40px 95px 40px;
-}
-
-.features {
-    background-color: #aa9898;
-    padding: 95px 40px 95px 40px;
-}
-
-.contact-content-container-home {
-    padding: 95px 60px 95px 60px;
-}
-
- @media (max-width: 800px) {
-     .grid-container > div {
-         margin-bottom: 0px;
-     }
-  }
    
 /*----------------------------------------- Philosophies Row */
 
@@ -520,7 +523,7 @@ button:focus {
     color: #000000;
 }
 
-/*-----------------------------------------ABOUT US MAINx */
+/*-----------------------------------------ABOUT US MAIN */
 /*------ Front Page About Us Section Left Column */
 
 .about-us-col-bg-0 {
@@ -559,59 +562,6 @@ button:focus {
 }
 
 
-/*-----------------------------------------Form Controls */
-
-::placeholder {
-    color: grey !important;
-    text-transform: uppercase;
-}
-
-input[type=text] {
-    background-color: rgb(233, 229, 225);
-    margin: 0px;
-    border-style: solid;
-    border-width: 1px;  
-    border-color: #ffffff; 
-    border-radius:0px;
-    width: 100%;
-}
-
-input[type=email] {
-    margin: 0px;
-    border-style: solid;
-    border-width: 1px;  
-    border-color: #ffffff; 
-    border-radius:0px;
-    width: 100%;
-}
-
-textarea[type=text] {
-    background-color: rgb(233, 229, 225);
-    margin: 0px;
-    text-indent: 0.05em;
-    border-style: solid;  
-    border-width: 1px;  
-    border-color: #ffffff; 
-    border-radius:0px;
-}
-
-input[type=text]:focus {
-    background-color: rgb(233, 229, 225);
-}
-
-textarea[type=text]:focus {
-    background-color: rgb(233, 229, 225);    
-}
-
-
-@media screen and (max-width: 600px) {
-    input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-}
-
-
 /*-----------------------------------------WHO WE ARE SECTION */
 
 /*----- ABOUT PAGE -----*/
@@ -638,6 +588,12 @@ textarea[type=text]:focus {
 
 }
 
+.about-content-container{
+    background-color: rgb(241, 241, 241);
+    padding: 95px 40px 95px 40px;
+}
+
+
 .caption{
     font-weight: bold;
     font-size: larger;
@@ -658,11 +614,21 @@ textarea[type=text]:focus {
 
 
 
-/*----- About Alee ----- */
+/*----------------------------------------- THE FOUNDER ----- */
+/*----- About Page Alee Header -----*/
+.container-wrapper--alee {
+    background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 70vh;
+    max-width: 100%;
+}
 
 .aleecol {
-background-color: #FFF;
-padding: 50px 40px 50px 40px;
+background-color:  rgb(216, 213, 213);
+padding: 95px 40px 95px 40px;
 }
 
 .aleecol2 {
@@ -670,28 +636,49 @@ padding: 50px 40px 50px 40px;
     margin-top: 150px;
     }
 
+/*-----------------------------------------MENTORSHIP */
+
+    .mentorship-container{
+        background-color: rgb(0, 0, 0);  
+        padding: 95px 40px 95px 40px;
+    }
+    
+    .mentorship-container2 {
+        background-color: rgb(216, 213, 213);
+        padding: 95px 40px 95px 40px;
+    }
+    
+    .mentorship-margin {
+        margin-top: 200px;
+    }
+
+    .mentorship-content{
+        text-align: center; 
+        padding: 20px;
+        font-size: 130%
+    }
+    
+    .mentorship-content2{
+        text-align: center; 
+        padding: 20px;
+        text-align: left;
+        
+    }
 
 /*-----------------------------------------WHAT WE DO SECTION */
+ 
 
-.whatwedo-heading{
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    color: #dbc7bd;
-    margin: auto;
-    padding-bottom: 50px;
+.theartofcoding-bg {
+    background: url('../images/container-background/theartofcoding.jpg') no-repeat center center;
+    background-color: rgb(0, 0, 0);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 100%;
+    height: 70vh;
 }
 
-.whatwedo2-heading{
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    color: #dbc7bd;
-    margin: auto;
-    padding-bottom: 50px;
-}
 
 .whatwedo-content{
     text-align: center; 
@@ -699,26 +686,16 @@ padding: 50px 40px 50px 40px;
     font-size: 120%
 }
 
-.whatwedo-content2{
-    text-align: center; 
-    padding: 20px;
-    font-size: 150%
+.whatwedo-icon {
+    font-size: 120px;
+    color: #000000;
 }
-
-.mentorship-content{
-    text-align: center; 
-    padding: 20px;
-    font-size: 130%
-}
-
-.mentorship-content2{
-    text-align: center; 
-    padding: 20px;
-    text-align: left;
-}
-
-
 /*----------------------------------------- Featured Services -----*/
+
+.features {
+    background-color: #aa9898;
+    padding: 95px 40px 95px 40px;
+}
 
 .features-container{
     background-color: rgb(0, 0, 0);    
@@ -779,18 +756,27 @@ div.colhover:hover {
     -o-transition: all 0.35s ease-in-out; 
 }
 
+/*----------------------------------------- SUBSCRIBE */
+
+.subscribe-bg{
+    padding: 105px 40px 105px 40px;
+    background-color: rgb(216, 213, 213);
+}
+
+.subscribe-content-container2{
+    padding: 120px 100px 120px 100px;
+}
 
 
-/*-----------------------------------------Contact*/
+/*-----------------------------------------CONTACT */
 
-.contact-heading {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    color: #dbc7bd;
-    margin: auto;
-    padding-bottom: 50px;
+.contact-content-container {
+    padding: 95px 60px 95px 60px;
+    background-color: rgb(216, 213, 213);
+}
+
+.contact-content-container-home {
+    padding: 95px 60px 95px 60px;
 }
 
 .contact-content {
@@ -802,6 +788,14 @@ div.colhover:hover {
 
 .contact-main-bg {
     background: url('../images/container-background/contact-bg.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.contact-page{
+    background: url('../images/container-background/contactbackground.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
