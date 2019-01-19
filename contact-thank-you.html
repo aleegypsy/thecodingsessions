@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- SITE PROUDLY BUILT BY THE CODING SESSIONS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -30,6 +31,9 @@
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" /> 
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@4.0.0/dist/simpleParallax.min.js"></script>
+    <script src="assets/js/rellax.min.js"></script>
+
 
 <style type="text/css">
 	#mc_embed_signup{background:none; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
@@ -72,8 +76,6 @@
     
 </head>
 
-<!-- SITE CREATED BY THE CODING SESSIONS -->
-
 <body>
 <!-- Navigation -->
         <!-- Bootstrap 4 Navigation -->
@@ -88,20 +90,24 @@
           
         
           <div class="collapse navbar-collapse flex-row-reverse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <ul class="navbar-nav">
+                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="nav-link" href="/who-we-are.html">About</a>
+                        </li> 
+                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                         <a class="nav-link" href="/about-alee.html">The Founder</a>
+                        </li> 
+                      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link" href="/1-1-mentorship.html">1:1 Mentorship</a>
+                      </li>    
+                      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link" href="https://thecodingsessions.teachable.com/" target="_blank">Courses</a>
+                      </li>
+                      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link" href="/contact.html">Contact</a>
                       </li> 
-              <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <a class="nav-link" href="/1-1-mentorship.html">1:1 Mentorship</a>
-              </li>    
-              <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <a class="nav-link" href="https://thecodingsessions.teachable.com/" target="_blank">Courses</a>
-              </li>
-              <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <a class="nav-link" href="/contact.html">Contact</a>
-              </li> 
-            </ul>
+                    </ul>
+
         </div>
         </nav>
         
@@ -117,6 +123,7 @@
     </section>
 
 <!-- Features -->
+
 <section class="container-fluid features-container">
         <!-- Row -->
         <div class="row">
@@ -127,19 +134,19 @@
                     <div class="row row-grid">
                        
                             <!-- Col 1-->    
-     <div class="col-sm-4 colhover btn-position fadein">
-       <img class="img-fluid" src="assets/images/column-background/learncodeimg.png">
+     <div class="col-sm-4 colhover btn-position">
+       <img class="img-fluid frontimage" src="assets/images/column-background/learncodeimg.png">
        <a href="https://thecodingsessions.teachable.com/" target="_blank" class="btn btn-light-feature uppercase mt-5">Learning</a>
 </div>
                               <!-- Col 2-->  
-    <div class="col-sm-4 colhover btn-position fadein">
-            <img class="img-fluid" src="assets/images/column-background/mentorshipimg.png">
+    <div class="col-sm-4 colhover btn-position">
+            <img class="img-fluid frontimage" src="assets/images/column-background/mentorshipimg.png">
             <a href="/1-1-mentorship.html" class="btn btn-light-feature uppercase mt-5">1:1</a>
     </div>
       
     <!-- Col 3-->
-    <div class="col-sm-4 colhover btn-position fadein">
-            <img class="img-fluid" src="assets/images/column-background/fbcommunityimg.png">
+    <div class="col-sm-4 colhover btn-position">
+            <img class="img-fluid frontimage" src="assets/images/column-background/fbcommunityimg.png">
             <a href="https://www.facebook.com/groups/thecodingsessions/" target="_blank" class="btn btn-light-feature uppercase mt-5">Group</a>
                         </div>
    
@@ -148,37 +155,36 @@
 </section>
 
 
-
-
 <!-- Subscribe -->
-<section class="container-fluid subscribe-bg fadein">
-    <div class="row">
-        <div class="col">
-                <h2 class="main-header uppercase">Subscribe to our email list</h2>
-                <hr class="block-divider-main mb-5">
-                <p class="mb-5">Sign up with your email address to receive news and updates.</p>
+<section class="container-fluid subscribe-bg">
+        <div class="row">
+            <div class="col">
+                    <h2 class="main-header uppercase">Subscribe to our email list</h2>
+                    <hr class="block-divider-main mb-5">
+                    <p class="mb-5">Sign up with your email address to receive news and updates.</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <!-- Begin Mailchimp Signup Form -->
-
-<div id="mc_embed_signup">
-<form action="https://thecodingsessions.us19.list-manage.com/subscribe/post?u=7dbf179a053b19e7557c50e6e&amp;id=150a12b951" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7dbf179a053b19e7557c50e6e_150a12b951" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-
-<!--End mc_embed_signup-->
+        <div class="row">
+            <div class="col">
+                <!-- Begin Mailchimp Signup Form -->
+    
+    <div id="mc_embed_signup">
+    <form action="https://thecodingsessions.us19.list-manage.com/subscribe/post?u=7dbf179a053b19e7557c50e6e&amp;id=150a12b951" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+        
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7dbf179a053b19e7557c50e6e_150a12b951" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
         </div>
+    </form>
     </div>
-</section>
+    
+    <!--End mc_embed_signup-->
+            </div>
+        </div>
+    </section>
+    
 
 <!-- Footer -->
 <footer class="container-fluid" id="follow">
@@ -193,19 +199,19 @@
         <div class="container mb-5">
         <div class="row">
                 <div class="col-md colhover hvr-bounce-in">
-                        <a href="https://www.instagram.com/p/BsSawxCBlEG/" target="_blank"><img class="responsive" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/4412202d5284c3e31348bc4c83dc2739/5CB45B98/t51.2885-15/e35/47693026_135370984147259_4533155092066074628_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+                        <a href="https://www.instagram.com/p/BsSawxCBlEG/" target="_blank"><img class="responsive frontimage" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/4412202d5284c3e31348bc4c83dc2739/5CB45B98/t51.2885-15/e35/47693026_135370984147259_4533155092066074628_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
                 <div class="col-md colhover hvr-bounce-in">
-                        <a href="https://www.instagram.com/p/BsRmMWZB-g7/" target="_blank"><img class="responsive" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/181839a6dead13c1ffee2bd743da0da2/5CB65DB8/t51.2885-15/e35/47693854_2043857169038294_4105609259165760102_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+                        <a href="https://www.instagram.com/p/BsRmMWZB-g7/" target="_blank"><img class="responsive frontimage2" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/181839a6dead13c1ffee2bd743da0da2/5CB65DB8/t51.2885-15/e35/47693854_2043857169038294_4105609259165760102_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
                 <div class="col-md colhover hvr-bounce-in">
-                        <a href="https://www.instagram.com/p/BsRlyVah_fB/" target="_blank"><img class="responsive" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/8bce221635b26b68fbef3b63f591ee12/5CD542B6/t51.2885-15/e35/49858234_533332657149212_4180194724645293659_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+                        <a href="https://www.instagram.com/p/BsRlyVah_fB/" target="_blank"><img class="responsive frontimage" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/8bce221635b26b68fbef3b63f591ee12/5CD542B6/t51.2885-15/e35/49858234_533332657149212_4180194724645293659_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
                 <div class="col-md colhover hvr-bounce-in">
-                        <a href="https://www.instagram.com/p/BsRla_uh7Nr/" target="_blank"><img class="responsive" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/0b6bec3ddbdcb9c84ba77ca2649479ff/5CCF370C/t51.2885-15/e35/47691092_1214121432083956_1397772182755266995_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+                        <a href="https://www.instagram.com/p/BsRla_uh7Nr/" target="_blank"><img class="responsive frontimage2" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/0b6bec3ddbdcb9c84ba77ca2649479ff/5CCF370C/t51.2885-15/e35/47691092_1214121432083956_1397772182755266995_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
             </div> 
@@ -223,7 +229,7 @@
         <div class="row col-sm justify-content-center">
             <div class="copyright">
                 <p class="uppercase">© 2019 Site Created By <a class="copyright2" target="_blank" href="https://www.thecodingsessions.com.au/">The Coding Sessions.</a> View Our <a class="copyright2" href="/Privacy-Policy.pdf" target="_blank" data-toggle="modal" data-target="#PrivacyModal">Privacy Policy</a></p>   
-        </div> 
+        </div>  
         </div>  
     </section>
   </footer>

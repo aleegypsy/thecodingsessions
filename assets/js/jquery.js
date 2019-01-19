@@ -15,29 +15,6 @@ $(document).ready(function() {
     });
 });
 
-// fadein jumbotron
-  $(".opening").hide().fadeIn(2000);
-
-//cookies
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#bfadad",
-        "text": "#ffffff"
-  },
-    "button": {
-      "background": "#000000",
-        "text": "#e3c1c1"
-        }
-      },
-      "theme": "edgeless",
-      "content": {
-        "message": "We use cookies to ensure you get the best experience on our website.",
-        "dismiss": "GOT IT",
-        "link": "LEARN MORE"
-      }
-    })});
 
     
 //scroll down
@@ -108,8 +85,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 
 
 
-// transparent to solid navbar
-
+// transparent to solid navbar  
 $(document).ready(function() {
   // Transition effect for navbar 
   $(window).scroll(function() {
@@ -121,3 +97,31 @@ $(document).ready(function() {
     }
   });
 });
+
+// parallax on individual images
+var image = document.getElementsByClassName('frontimage');
+new simpleParallax(image, {
+	delay: .6,
+	transition: 'cubic-bezier(0,0,0,1)'
+});
+
+var image = document.getElementsByClassName('frontimage2');
+new simpleParallax(image, {
+	orientation: 'left'
+});
+
+
+// paralax on background images
+  var rellax = newFunction();
+
+function newFunction() {
+  return new Rellax('.rellax', {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+}
+
