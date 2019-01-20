@@ -22,6 +22,14 @@ body {
 
 body, html, main{height:100%;}
 
+
+section.diagonalsection{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    margin-bottom: -8em;
+}
+
+
 /*----------------------------------------- Mobile and iPad devices */
 
 
@@ -97,17 +105,6 @@ font-size: 2em;
 /*----- Home Page -----*/
 
 
-.servicesheader {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    color: #ab9eb3;
-    font-size: 25px;
-    background-color: #000000;
-    padding: 10px;
-    margin-top: 12ex;
-    width: 65%;
-    margin-left: 5ex;
-}
 
 .main-header-big {
     color:  #b3a2a2;
@@ -121,7 +118,7 @@ font-size: 2em;
     }
 
 .main-header {
-    color:  #b3a2a2;
+    color:  #b9b9b7;
     text-transform: uppercase;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -130,19 +127,9 @@ font-size: 2em;
     padding-bottom: 40px;
     }
 
-    .main-header-coding {
-        color:  #b3a2a2;
-        text-transform: uppercase;
-        text-align: center;
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-weight: bold;
-        margin: auto;
-        padding-bottom: 40px;
-        font-size: 2.7em;
-        }    
 
 .main-header-left {
-    color:  #b3a2a2;
+    color:  #c7abab;
     text-transform: uppercase;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -164,9 +151,9 @@ font-size: 2em;
 
     .block-divider-main {
         width: 75px;
-        height: 5px;
+        height: 7px;
         border: 0;
-        background-color:  #685d66;
+        background-image: linear-gradient(135deg, rgb(163, 145, 161), rgb(114, 112, 113));
     }        
 
 
@@ -183,7 +170,7 @@ font-size: 2em;
 
 /*-------main page links-----*/
 .bodylink{
-    color: #6d5e70;
+    color: #a18da5;
 }
 
 .bodylink:hover{
@@ -377,11 +364,11 @@ textarea[type=text]:focus {
 
 
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(161, 161, 161, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(167, 163, 170)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler.navbar-toggler {
-    border-color: rgba(161, 161, 161, 1);
+    border-color: rgb(167, 163, 170);
 } 
 
 .custom-toggler.navbar-toggler:hover {
@@ -457,7 +444,7 @@ button:focus {
     /* Margins */
     margin-top: 4em;  
     margin-bottom: 0.5em;
-    background-color: #000000;
+    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
     padding:40px;
 }
 
@@ -467,7 +454,7 @@ button:focus {
     font-weight: 800;
     letter-spacing: 2pt;
     text-transform: uppercase;
-    margin-top: 3em;
+    margin-top: 2em;
     padding: 40px;
     
 }
@@ -501,8 +488,9 @@ button:focus {
 /*----------------------------------------- Philosophies Row */
 
 .philosophies-bg {
-    background-color: rgb(216, 213, 213);
+    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
     padding: 95px 90px 95px 90px;
+    color: #cacaca;
 }
 
 .philosophies-icon {
@@ -514,7 +502,7 @@ button:focus {
 /*------ Front Page About Us Section Left Column */
 
 .about-us-col-bg-0 {
-    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -527,7 +515,7 @@ button:focus {
 
 .about-us-col-padding {
     padding: 55px 40px 55px 40px;
-    background-color: #000000;
+    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
     
 }
 
@@ -553,59 +541,72 @@ button:focus {
 
 /*-----------------------------------------WHO WE ARE SECTION */
 
-/*----- ABOUT PAGE -----*/
+/*----Header Stuff -----*/
 
-.about-heading {
-        text-transform: uppercase;
-        text-align: center;
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-weight: bold;
-        color: #dbc7bd;
-        margin: auto;
-        padding-bottom: 20px;
-    
+.opaque-pageheaders {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.76);
 }
 
-.about-heading2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    color: #bdb2be;
-    margin: auto;
-    padding-bottom: 50px;
+.whoweareheader {
+    background: url('../images/container-background/who-we-are-header.jpg') no-repeat center center;
+    height: 70vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+section.whoweareheadersection {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 
 }
 
-.about-content-container{
-    background-color: rgb(241, 241, 241);
+.whoweareheadertext {
+    margin-top: 6em;
+}
+
+/*----Content Stuff -----*/
+
+.whowearecontainergrey {
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
+    padding: 120px 40px 95px 40px;
+    margin-top: -7em;
+}
+
+.whowearecontainerblack {
+    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
+    padding: 120px 40px 95px 40px;
+    margin-top: -10em;
+}
+
+.whowearecontent {
     padding: 95px 40px 95px 40px;
+    color: rgb(214, 205, 205);
+    font-size: 1.1em;
+    margin-top: -4em;
 }
 
-
-.caption{
-    font-weight: bold;
-    font-size: larger;
+.whatwedo-content{
+    text-align: center; 
+    padding: 20px;
+    font-size: 1.4em;
 }
 
-.caption2{
-    color: #c6b0b3;
+.whatwedo-icon {
+    font-size: 120px;
+    color: #000000;
 }
-
-.caption3{
-    color: #bbb6c1;
-}
-
-.caption4{
-    color: #c6b0b3;
-    font-size: larger;
-}
-
 
 
 /*----------------------------------------- THE FOUNDER ----- */
 /*----- About Page Alee Header -----*/
-.container-wrapper--alee {
+.aboutaleeheader {
     background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -615,75 +616,112 @@ button:focus {
     max-width: 100%;
 }
 
+section.aboutaleesection {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+}
+
+.heyimaleetext {
+    margin-top: 20em;
+    margin-left: 25em;
+}
+
+.aboutaleecontent {
+    padding: 80px 40px 90px 40px;
+    color: rgb(214, 205, 205);
+    font-size: 1.1em;
+}
+
 .aleecol {
-background-color:  rgb(216, 213, 213);
-padding: 95px 40px 95px 40px;
+    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+padding: 100px 40px 95px 40px;
+margin-top: -9em;
+}
+
+.aleecol2 {
+    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    padding: 100px 40px 100px 40px;
+    color: rgb(214, 205, 205);
+    font-size: 1.1em;
+    margin-top: -1em;
 }
 
 .aleecol3 {
-    background-color:  rgb(0, 0, 0);
-    padding: 95px 40px 95px 40px;
+    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
+    padding: 95px 40px 150px 40px;
+    margin-top: -1em;
     }
 
-.aleecol2 {
-    background-color: #FFF;
-    margin-top: 150px;
-    }
+
 
 /*-----------------------------------------MENTORSHIP */
 
-    .mentorship-container{
-        background-color: rgb(0, 0, 0);  
-        padding: 95px 40px 95px 40px;
-    }
-    
-    .mentorship-container2 {
-        background-color: rgb(216, 213, 213);
-        padding: 95px 40px 95px 40px;
-    }
-    
-    .mentorship-margin {
-        margin-top: 200px;
-    }
-
-    .mentorship-content{
-        text-align: center; 
-        padding: 20px;
-        font-size: 130%
-    }
-    
-    .mentorship-content2{
-        text-align: center; 
-        padding: 20px;
-        text-align: left;
-        
-    }
-
-/*-----------------------------------------WHAT WE DO SECTION */
- 
-
-.theartofcoding-bg {
-    background: url('../images/container-background/theartofcoding.jpg') no-repeat center center;
-    background-color: rgb(0, 0, 0);
+.mentorshipheader {
+    background: url('../images/container-background/mentorship-main-pic.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    max-width: 100%;
     height: 70vh;
+    max-width: 100%;
 }
 
+.mentorship-container{
+    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
+        padding: 95px 40px 100px 40px;
+        margin-top: -1em;
+    }
+    
+.mentorship-container2 {
+    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    padding: 150px 40px 95px 40px;
+    color: rgb(196, 185, 185);
+    margin-top: -15em;
+    }
 
-.whatwedo-content{
+.mentorship-container3 {
+    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    padding: 100px 40px 90px;
+    color: rgb(196, 185, 185);
+    }    
+
+    .mentorship-container4{
+        background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
+        padding: 95px 40px 350px 40px;
+            margin-top: -1em;
+        }
+
+.mentorship-margin {
+    margin-top: 200px;
+    }
+
+.mentorship-content{
     text-align: center; 
     padding: 20px;
-    font-size: 120%
-}
+    font-size: 1.1em;
+    }
+    
+.mentorship-content2{
+    padding: 20px;
+    text-align: left;
+    color: rgb(196, 185, 185);
+    font-size: 1.1em;
+    }
 
-.whatwedo-icon {
-    font-size: 120px;
-    color: #000000;
-}
+.mentorship-content3{
+    padding: 20px;
+    text-align: center;
+    color: rgb(196, 185, 185);
+    font-size: 1.1em;
+    }
+
+    .mentorship-content4{
+        text-align: center; 
+        padding: 20px;
+        font-size: 1.7em;
+        }
+
 /*----------------------------------------- Featured Services -----*/
 
 .features {
@@ -692,8 +730,9 @@ padding: 95px 40px 95px 40px;
 }
 
 .features-container{
-    background-color: rgb(0, 0, 0);    
-    padding: 60px 40px 60px 40px;
+    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
+    padding: 90px 40px 90px 40px;
+    margin-top: -1em;
 }
 
 /*----- Heading Buttons -----*/
@@ -754,7 +793,10 @@ div.colhover:hover {
 
 .subscribe-bg{
     padding: 105px 40px 105px 40px;
-    background-color: rgb(216, 213, 213);
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
+color: #b9b9b7;
+margin-top: -1em;
+margin-bottom: -1em;
 }
 
 .subscribe-content-container2{
@@ -767,31 +809,20 @@ div.colhover:hover {
 
 .contact-content-container {
     padding: 95px 60px 95px 60px;
-    background-color: rgb(216, 213, 213);
+    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
 }
 
-.contact-content-container-home {
-    padding: 95px 60px 95px 60px;
-}
-
-.contact-content {
-    text-align: center;   
-    font-weight: bold;
-    font-size: medium;
-    color: #4a4b4d;
-    background-color: rgb(216, 213, 213);
-}
-
-.contact-main-bg {
-    background: url('../images/container-background/contact-bg.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-top: -40px;
-    margin-bottom: -40px;
-    
-}
+.contact-content{
+    padding: 30px;
+    text-align: center;
+    color: rgb(196, 185, 185);
+    font-size: 1.1em;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+    }
 
 .contact-page{
     background: url('../images/container-background/contactbackground.jpg') no-repeat center center;
