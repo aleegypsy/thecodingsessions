@@ -1,24 +1,8 @@
 
-//fade in sections
-$(document).ready(function() {
-    $(window).scroll( function(){
-        $('.fadein').each( function(i){
-            
-            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            if( bottom_of_window > bottom_of_element ){
-                $(this).animate({'opacity':'1'},500);
-            }
-            
-        }); 
-    });
-});
-
 
     
 //scroll down
-    $(document).ready(function(){
+    $(function(){
       $("a").on('click', function(event) {
         if (this.hash !== "") {
           event.preventDefault();
@@ -86,7 +70,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 
 
 // transparent to solid navbar  
-$(document).ready(function() {
+$(function() {
   // Transition effect for navbar 
   $(window).scroll(function() {
     // checks if window is scrolled more than 500px, adds/removes solid class

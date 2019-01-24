@@ -409,6 +409,13 @@ button:focus {
 
 /*-----------------------------------------Header Image */
 
+/* Jumbotron */
+
+.jumbotron {
+    background-color: transparent;
+}
+
+
 .opaque-overlay {
     position: absolute;
     top: 0;
@@ -419,18 +426,20 @@ button:focus {
 }
 
 .header-image {
-    background: url('../images/header/main-header.jpg') no-repeat center center fixed;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url('../images/header/main-header.png') no-repeat center center fixed;
+   height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    position: relative;
 }
+
 
 .header-image h1 {
     /* Text styles */
@@ -442,7 +451,6 @@ button:focus {
     text-align: center;
     text-transform: uppercase;
     /* Margins */
-    margin-top: 4em;  
     margin-bottom: 0.5em;
     background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
     padding:40px;
@@ -488,7 +496,7 @@ button:focus {
 /*----------------------------------------- Philosophies Row */
 
 .philosophies-bg {
-    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
     padding: 95px 90px 95px 90px;
     color: #cacaca;
 }
@@ -634,13 +642,13 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
 
 .aleecol {
-    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
 padding: 100px 40px 95px 40px;
 margin-top: -9em;
 }
 
 .aleecol2 {
-    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
     padding: 100px 40px 100px 40px;
     color: rgb(214, 205, 205);
     font-size: 1.1em;
@@ -674,16 +682,17 @@ margin-top: -9em;
     }
     
 .mentorship-container2 {
-    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
     padding: 150px 40px 95px 40px;
     color: rgb(196, 185, 185);
     margin-top: -15em;
     }
 
 .mentorship-container3 {
-    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
     padding: 100px 40px 90px;
     color: rgb(196, 185, 185);
+    margin-top: -1em;
     }    
 
     .mentorship-container4{
@@ -809,7 +818,7 @@ margin-bottom: -1em;
 
 .contact-content-container {
     padding: 95px 60px 95px 60px;
-    background-image: linear-gradient(135deg, rgb(153, 147, 147), #111);
+    background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
 }
 
 .contact-content{
