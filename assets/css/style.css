@@ -412,12 +412,14 @@ button:focus {
     color: rgb(190, 174, 174);
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: center;
     text-transform: uppercase;
     /* Margins */
     margin-bottom: 1em;
+    margin-top: -10em;
 }
+
 
 
 .carousel-caption h4 {
@@ -444,9 +446,7 @@ button:focus {
     cursor: pointer;
 }
 
-.carousel-indicators {
-    margin-bottom: 2em;
-}
+
 
 /*------ Block dividers ------*/
 
@@ -907,4 +907,6 @@ footer{
     color: #928e87;
     text-decoration: none;
 }
+
+
 
