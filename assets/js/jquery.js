@@ -1,5 +1,5 @@
 /* global $ */
-$(function() {
+$(function( _script) {
 
 //cookie consent
 
