@@ -30,36 +30,12 @@ section.diagonalsection{
 }
 
 
-/*----------------------------------------- Mobile and iPad devices */
-
-
-/*---- All mobile devices portrait */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) { 
-    .header-image h1 {
-        font-size: 40px!important;
-    }    
-  
-}
-
-
 /*---Text -- */
 .uppercase{
     text-transform: uppercase;
 }
   
 
-/*--- Scroll Down Button -- */
-.ct-btn-scroll {
-text-decoration: none;
-color: rgb(255, 255, 255);
-font-size: 2em;
-  }
-
-.ct-btn-scroll:hover {
-    color: rgb(94, 94, 94);
-}
   
 /*--- Scroll Up Button -- */
 #return-to-top {
@@ -412,7 +388,7 @@ button:focus {
     color: rgb(190, 174, 174);
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2.8em;
     text-align: center;
     text-transform: uppercase;
     /* Margins */
@@ -469,7 +445,8 @@ button:focus {
 
 .philosophies-icon {
     font-size: 120px;
-    color: #000000;
+    color: #252525;
+    padding: 40px;
 }
 
 /*-----------------------------------------ABOUT US MAIN */
