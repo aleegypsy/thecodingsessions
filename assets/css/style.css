@@ -295,7 +295,7 @@ textarea[type=text]:focus {
 /*----------------------------------------NAVBAR */
 /*------Navbar home page */
 .navbar-bg{
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.137);
     border: 0;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
