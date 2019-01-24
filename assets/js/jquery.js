@@ -1,25 +1,5 @@
 /* global $ */
 $(document).ready(function () {
-
-  
-//cookie consent
-
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    "palette": {
-      "popup": {
-        "background": "#000"
-      },
-      "button": {
-        "background": "#615c5c",
-        "text": "#f7eded"
-      }
-    },
-    "position": "top",
-    "content": {
-      "message": "We use cookies to ensure you get the best experience when browsing our website."
-    }
-  })});
     
 //scroll down
     $(function(){
