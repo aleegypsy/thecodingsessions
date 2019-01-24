@@ -1,6 +1,7 @@
 /* global $ */
-$(function( _script) {
+$(document).ready(function () {
 
+  
 //cookie consent
 
 window.addEventListener("load", function(){
