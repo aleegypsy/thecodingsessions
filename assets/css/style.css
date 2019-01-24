@@ -403,72 +403,39 @@ button:focus {
   
 
 /*-----------------------------------------Header Image */
-
 /* Jumbotron */
 
-.jumbotron {
-    background-color: transparent;
-}
 
 
-.opaque-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.753);
-}
-
-.header-image {
-    background: url('../images/header/main-header.png') no-repeat center center fixed;
-   height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-}
-
-
-.header-image h1 {
+.carousel-caption h1 {
     /* Text styles */
     color: rgb(190, 174, 174);
-    margin-bottom: 30px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
     /* Margins */
-    margin-bottom: 0.5em;
-    background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
-    padding:40px;
+    margin-bottom: 1em;
 }
 
 
-.header-image h4 {
+.carousel-caption h4 {
     color: #b39595;
     font-weight: 800;
     letter-spacing: 2pt;
     text-transform: uppercase;
-    margin-top: 2em;
-    padding: 40px;
+    margin-bottom: 1.3em;
     
 }
 
-.header-image .btn {
+.carousel-caption .btn {
     background-color: transparent;
     color: rgb(237, 227, 222);
     border: 2px solid #e7e7e7;
     padding: 20px;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-top: 1em;
+    margin-bottom: 5em;
     text-transform: uppercase;    
     font-family: 'Poppins', sans-serif;
     border-radius: 0px;
@@ -477,6 +444,9 @@ button:focus {
     cursor: pointer;
 }
 
+.carousel-indicators {
+    margin-bottom: 2em;
+}
 
 /*------ Block dividers ------*/
 
@@ -484,6 +454,7 @@ button:focus {
     width: 75px;
     height: 5px;
     border: 0;
+    margin-bottom: 3em;
     background-color: #e5cdce;
 }
 
@@ -695,10 +666,6 @@ margin-top: -9em;
         padding: 95px 40px 350px 40px;
             margin-top: -1em;
         }
-
-.mentorship-margin {
-    margin-top: 200px;
-    }
 
 .mentorship-content{
     text-align: center; 
@@ -940,5 +907,7 @@ footer{
     color: #928e87;
     text-decoration: none;
 }
+
+
 
 

@@ -94,6 +94,10 @@ new simpleParallax(image, {
 	orientation: 'left'
 });
 
+
+
+
+
 });
 
 
