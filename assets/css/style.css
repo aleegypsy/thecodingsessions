@@ -157,11 +157,6 @@ font-size: 2em;
     }        
 
 
-/*-------Fade in each section on scroll-----*/
-.fadein { 
-    opacity:0.2;
-}
-
 /*-------responsive image-----*/
 .responsive {
     max-width: 100%;
@@ -813,6 +808,9 @@ margin-bottom: -1em;
     background-color: rgb(216, 213, 213);
 }
 
+.subscribe-free-gift {
+    font-size: 1.3em;
+}
 
 /*-----------------------------------------CONTACT */
 
@@ -840,6 +838,16 @@ margin-bottom: -1em;
     -o-background-size: cover;
     background-size: cover;
 
+}
+
+.contact-page-font {
+    color:  #b9b9b7;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 40px;
 }
 
 /*-----------------------------------------Footer*/
