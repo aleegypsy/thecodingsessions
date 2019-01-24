@@ -306,28 +306,26 @@
 
   <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-circle-up"></i></a>
   <!-- Scripts --> 
-  <script>
-        // paralax on background images
-        var rellax = newFunction();
-        
-        function newFunction() {
-          return new Rellax('.rellax', {
-            speed: -1,
-            center: false,
-            wrapper: null,
-            round: true,
-            vertical: true,
-            horizontal: false
-          });
-        }
-        </script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@4.0.0/dist/simpleParallax.min.js"></script>
 <script src="assets/js/rellax.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-
+<script>
+    // paralax on background images
+    var rellax = newFunction();
+    
+    function newFunction() {
+      return new Rellax('.rellax', {
+        speed: -1,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+      });
+    }
+    </script>
 </body>
 </html>
