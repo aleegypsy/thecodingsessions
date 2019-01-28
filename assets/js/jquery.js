@@ -81,8 +81,6 @@ new simpleParallax(image, {
 
 
 
-
-
 });
 
 
