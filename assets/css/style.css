@@ -3,7 +3,7 @@
  * Copyright 2019
  * Created by The Coding Sessions
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,500,600,700|Nunito+Sans:300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 @-webkit-keyframes 'fadeIn' {
   from {
     opacity: 0;
@@ -393,14 +393,14 @@ button:focus {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
-  font-size: 4.6rem;
+  font-size: 8vh;
   letter-spacing: 1.3pt;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 1em;
-  margin-top: -7em;
+  margin-bottom: 0.5em;
+  margin-top: -7.5em;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
@@ -410,10 +410,11 @@ button:focus {
 
 .carousel-caption h4 {
   color: #cac8d4;
-  font-weight: 800;
+  font-weight: 300;
+  font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 2pt;
-  text-transform: uppercase;
-  font-size: 1.5em;
+  font-style: italic;
+  font-size: 3vh;
   margin-bottom: 1.4em;
 }
 
@@ -421,15 +422,16 @@ button:focus {
   background-color: transparent;
   color: #ede3de;
   border: 2px solid #e7e7e7;
-  padding: 20px;
-  margin-top: 1em;
+  border-radius: 0;
+  padding: 18px;
+  margin-top: 2em;
   margin-bottom: 3em;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  max-width: 100%;
+  max-width: 100vh;
 }
 
 .fade-in {
@@ -444,22 +446,22 @@ button:focus {
 }
 
 .fade-in.text {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.fade-in.text2 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.fade-in.text2 {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
 .fade-in.text3 {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 
 ol.carousel-indicators {
-  margin-bottom: 2em;
+  display: none;
 }
 
 .block-divider {
@@ -678,6 +680,7 @@ ol.carousel-indicators {
   background-color: transparent;
   color: #ede3de;
   border: 2px solid #e7e7e7;
+  border-radius: 0px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
