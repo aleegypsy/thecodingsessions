@@ -46,6 +46,17 @@ main {
   height: 100%;
 }
 
+.page-heading {
+  color: #d6caca;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  margin: auto;
+  padding-bottom: 40px;
+  font-size: 3em;
+}
+
 .diagonalsection {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
@@ -326,7 +337,7 @@ button:focus {
 .menu {
   width: 35px;
   height: 5px;
-  background-color: #cac8d4;
+  background-color: #BAB5AC;
   margin: 6px 0;
 }
 
@@ -356,7 +367,7 @@ button:focus {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #BAB5AC;
   display: block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -460,8 +471,10 @@ button:focus {
   animation-delay: 1.5s;
 }
 
-ol.carousel-indicators {
-  display: none;
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }
 
 .block-divider {
@@ -548,13 +561,13 @@ ol.carousel-indicators {
 .whowearecontent {
   padding: 95px 40px 95px 40px;
   color: #d6cdcd;
-  font-size: 1.1em;
   margin-top: -4em;
 }
 
 .whatwedo-content {
   text-align: center;
   padding: 20px;
+  color: #c4b9b9;
   font-size: 1.4em;
 }
 
@@ -673,7 +686,7 @@ ol.carousel-indicators {
 .features-container {
   background-image: linear-gradient(135deg, #181818, black);
   padding: 90px 40px 90px 40px;
-  margin-top: -1em;
+  margin-top: -1.5em;
 }
 
 .btn-light-feature {
@@ -763,6 +776,7 @@ ol.carousel-indicators {
 .contact-page {
   background: url("../images/container-background/contactbackground.jpg") no-repeat center center;
   background-size: cover;
+  height: 100vh;
 }
 
 .contact-page-font {
@@ -773,15 +787,6 @@ ol.carousel-indicators {
   font-weight: bold;
   margin: auto;
   padding-bottom: 40px;
-}
-
-.g-recaptcha iframe {
-  max-width: 100% !important;
-  transform: scale(0.9) !important;
-  -webkit-transform: scale(0.9) !important;
-  transform-origin: center center !important;
-  -webkit-transform-origin: center center !important;
-  margin-left: -1.5em;
 }
 
 #rc-imageselect {
@@ -818,8 +823,8 @@ footer {
   font-size: 30px;
   line-height: 10px;
   text-align: center;
-  color: #fafafa;
-  background: #757075;
+  color: #ffffff;
+  background: #BAB5AC;
 }
 
 .social-links li a i:hover {
@@ -869,7 +874,7 @@ footer {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .row > div {
     margin-bottom: 20px;
   }
@@ -888,5 +893,15 @@ footer {
   .sidenav a {
     font-size: 18px;
   }
+}
+
+@media (max-width: 991px) {
+  .column-margin {
+    margin-top: -20px;
+  }
+}
+
+.hideme {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

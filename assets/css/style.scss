@@ -9,7 +9,7 @@ $color_8: #bbb6c1;
 $color_9: grey;
 $color_10: rgb(237, 227, 222);
 $color_11: #928e87;
-$color_12: #818181;
+$color_12: #BAB5AC;
 $color_13: #f1f1f1;
 $color_14: #cac8d4;
 $color_15: #cacaca;
@@ -18,7 +18,7 @@ $color_17: rgb(214, 205, 205);
 $color_18: #000000;
 $color_19: rgb(196, 185, 185);
 $color_20: #dbc7bd;
-$color_21: #fafafa;
+$color_21: #ffffff;
 $color_22: #756975;
 $font_family_1: 'Poppins', sans-serif;
 $font_family_2: 'Open Sans Condensed', sans-serif;
@@ -28,7 +28,7 @@ $background_color_2: transparent;
 $background_color_3: rgb(89, 89, 89);
 $background_color_4: rgb(41, 40, 40);
 $background_color_5: #000000;
-$background_color_6: #cac8d4;
+$background_color_6: #BAB5AC;
 $background_color_7: rgba(5, 5, 5, 0.932);
 $background_color_8: rgb(0, 0, 0);
 $background_color_9: #e5cdce;
@@ -81,6 +81,16 @@ html {
 main {
 	height: 100%;
 }
+.page-heading{
+	color: #d6caca;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "Open Sans Condensed", sans-serif;
+	font-weight: bold;
+	margin: auto;
+	padding-bottom: 40px;
+	font-size: 3em;
+  }
 .diagonalsection {
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
@@ -465,8 +475,10 @@ button {
 	-moz-animation-delay: 1.5s;
 	animation-delay: 1.5s;
 }
-ol.carousel-indicators {
-	display: none;
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }
 .block-divider {
 	width: 75px;
@@ -550,12 +562,12 @@ ol.carousel-indicators {
 .whowearecontent {
 	padding: 95px 40px 95px 40px;
 	color: $color_17;
-	font-size: 1.1em;
 	margin-top: -4em;
 }
 .whatwedo-content {
 	text-align: center;
 	padding: 20px;
+	color: $color_19;
 	font-size: 1.4em;
 }
 .whatwedo-icon {
@@ -661,7 +673,7 @@ ol.carousel-indicators {
 .features-container {
 	background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
 	padding: 90px 40px 90px 40px;
-	margin-top: -1em;
+	margin-top: -1.5em;
 }
 .btn-light-feature {
 	background-color: $background_color_2;
@@ -748,6 +760,7 @@ ol.carousel-indicators {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	height: 100vh;
 }
 .contact-page-font {
 	color: $color_5;
@@ -757,16 +770,6 @@ ol.carousel-indicators {
 	font-weight: bold;
 	margin: auto;
 	padding-bottom: 40px;
-}
-.g-recaptcha {
-	iframe {
-		max-width: 100% !important;
-		transform: scale(0.90) !important;
-		-webkit-transform: scale(0.90) !important;
-		transform-origin: center center !important;
-		-webkit-transform-origin: center center !important;
-		margin-left: -1.5em;
-	}
 }
 #rc-imageselect {
 	transform: scale(0.90) !important;
@@ -803,7 +806,7 @@ footer {
 				line-height: 10px;
 				text-align: center;
 				color: $color_21;
-				background: #757075;
+				background: #BAB5AC;
 				&:hover {
 					opacity: 0.8;
 					transition: all 0.35s ease-in-out;
@@ -851,7 +854,7 @@ footer {
 		}
 	}
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
 	.row {
 		>div {
 			margin-bottom: 20px;
@@ -870,4 +873,14 @@ footer {
 			font-size: 18px;
 		}
 	}
+}
+@media (max-width: 991px) {
+	.column-margin {
+	  margin-top: -20px;
+	}
+  }
+
+.hideme
+{
+    opacity:0;
 }
