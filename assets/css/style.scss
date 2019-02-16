@@ -44,30 +44,6 @@ $border_color_1: #ffffff;
  */
  @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,500,600,700|Nunito+Sans:300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
 
-@-webkit-keyframes 'fadeIn'{
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-@-moz-keyframes 'fadeIn' {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-@keyframes "fadeIn" {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 
 body {
 	font-family: $font_family_1;
@@ -402,84 +378,120 @@ button {
 	background-color: $background_color_8;
 	transition: background-color 1s ease 0s;
 }
-.carousel-caption {
-	h1 {
-		background: -webkit-linear-gradient(rgb(223, 213, 213), rgb(173, 157, 157));
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		font-family: $font_family_3;
-		font-weight: bold;
-		font-size: 8vh;
-		letter-spacing: 1.3pt;
-		text-align: center;
+
+/*==============================
+      // carousel Styles //
+==============================*/
+header {
+
+	.carousel-item {
+		img {
+			height: 100vh;
+			z-index: 9;
+			object-fit: cover;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			position: relative;
+		}
+		h1 {
+			font-size: 46px;
+			font-weight: 700;
+			letter-spacing: -2px;
+			padding-bottom: 15px;
+			text-transform: uppercase;
+		}
+		h2 {
+			font-size: 28px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			padding-bottom: 30px;
+			text-transform: uppercase;
+		}
+		h5 {
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 0.5px;
+			line-height: 30px;
+			padding-bottom: 35px;
+		}
+	}
+	.gradient {
+		background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.486) 0%, rgba(8, 8, 8, 0.5) 100%);
+		background: -webkit-linear-gradient(-45deg, rgba(211, 71, 192, 0.5) 0%,rgba(99, 103, 128, 0.5) 100%);
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.527) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80bf0019', endColorstr='#8000159e',GradientType=1 );
+		position: absolute;
+		z-index: 99;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	width: 100%;
+	height: auto;
+	position: relative;
+	.carousel-indicators {
+		.active {
+			background-color: #77657a;
+		}
+		bottom: 40px;
+		li {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			margin-right: 7px;
+			margin-left: 7px;
+			background-color: rgb(146, 139, 139);
+
+
+		}
+	}
+	.carousel-caption {
+		position: absolute;
+		top: 60%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		margin: auto;
+		z-index: 999;
+	}
+	.btn-primary {
+		color: #2e3192;
+		font-weight: 700;
+		font-size: 18px;
+		padding: 15px 35px;
+		border-radius: 100px;
+		background-color: #ffffff;
+		border-color: #ffffff;
+		border: 2px solid #fff;
 		text-transform: uppercase;
-		margin-bottom: 0.5em;
-		margin-top: -7.5em;
-		white-space: pre-wrap;
-		white-space: -moz-pre-wrap;
-		white-space: -pre-wrap;
-		white-space: -o-pre-wrap;
-		word-wrap: break-word;
-	}
-	h4 {
-		color: $color_14;
-		font-weight: 300;
-		font-family: $font_family_2;
-		letter-spacing: 2pt;
-		font-style: italic;
-		font-size: 3vh;
-		margin-bottom: 1.4em;
-	}
-	.btn {
-		background-color: $background_color_2;
-		color: $color_10;
-		border: 2px solid #e7e7e7;
-		border-radius: 0;
-		padding: 18px;
-		margin-top: 2em;
-		margin-bottom: 3em;
-		text-transform: uppercase;
-		font-family: $font_family_1;
-		text-decoration: none;
-		display: inline-block;
-		cursor: pointer;
-		max-width: 100vh;
+		&:hover {
+			color: #ff0;
+			border-color: #ff0;
+			background-color: transparent;
+			border: 2px solid #ff0;
+		}
 	}
 }
-.fade-in {
-	opacity: 0;
-	opacity: 1 \9;
-	-webkit-animation: fadeIn ease-in 1;
-	-moz-animation: fadeIn ease-in 1;
-	animation: fadeIn ease-in 1;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
-	-webkit-animation-duration: 1s;
-	-moz-animation-duration: 1s;
-	animation-duration: 1s;
+.btn-primary {
+	&:not(:disabled) {
+		&:not(.disabled) {
+			&:active {
+				color: #000;
+				background-color: transparent;
+				border-color: transparent;
+			}
+		}
+	}
 }
-.fade-in.text {
-	-webkit-animation-delay: 0.5s;
-	-moz-animation-delay: 0.5s;
-	animation-delay: 0.5s;
-}
-.fade-in.text2 {
-	-webkit-animation-delay: 1s;
-	-moz-animation-delay: 1s;
-	animation-delay: 1s;
-}
-.fade-in.text3 {
-	-webkit-animation-delay: 1.5s;
-	-moz-animation-delay: 1.5s;
-	animation-delay: 1.5s;
-}
-.carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-}
+
+
 .block-divider {
 	width: 75px;
 	height: 5px;
@@ -880,7 +892,16 @@ footer {
 	}
   }
 
-.hideme
-{
-    opacity:0;
-}
+
+/*==============================================
+            Media Queries Styles
+===============================================*/
+/*== 1920px Media Queries Styles ==*/
+/*== 1440px Media Queries Styles ==*/
+/*== 1024px Media Queries Styles ==*/
+/*== 768px Media Queries Styles ==*/
+/*== 425px Media Queries Styles ==*/
+/*== 375px Media Queries Styles ==*/
+/*== 320px Media Queries Styles ==*/
+
+

@@ -4,33 +4,6 @@
  * Created by The Coding Sessions
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,500,600,700|Nunito+Sans:300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
-@-webkit-keyframes 'fadeIn' {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes "fadeIn" {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes "fadeIn" {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 body {
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -399,82 +372,113 @@ button:focus {
   transition: background-color 1s ease 0s;
 }
 
-.carousel-caption h1 {
-  background: -webkit-linear-gradient(#dfd5d5, #ad9d9d);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
-  font-size: 8vh;
-  letter-spacing: 1.3pt;
-  text-align: center;
+/*==============================
+      // carousel Styles //
+==============================*/
+header {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+header .carousel-item img {
+  height: 100vh;
+  z-index: 9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+}
+
+header .carousel-item h1 {
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  padding-bottom: 15px;
   text-transform: uppercase;
-  margin-bottom: 0.5em;
-  margin-top: -7.5em;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
 }
 
-.carousel-caption h4 {
-  color: #cac8d4;
-  font-weight: 300;
-  font-family: "Open Sans Condensed", sans-serif;
-  letter-spacing: 2pt;
-  font-style: italic;
-  font-size: 3vh;
-  margin-bottom: 1.4em;
+header .carousel-item h2 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
-.carousel-caption .btn {
+header .carousel-item h5 {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  padding-bottom: 35px;
+}
+
+header .gradient {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.527) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80bf0019', endColorstr='#8000159e',GradientType=1 );
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+header .carousel-indicators {
+  bottom: 40px;
+}
+
+header .carousel-indicators .active {
+  background-color: #77657a;
+}
+
+header .carousel-indicators li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 7px;
+  margin-left: 7px;
+  background-color: #928b8b;
+}
+
+header .carousel-caption {
+  position: absolute;
+  top: 60%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  z-index: 999;
+}
+
+header .btn-primary {
+  color: #2e3192;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px 35px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+}
+
+header .btn-primary:hover {
+  color: #ff0;
+  border-color: #ff0;
   background-color: transparent;
-  color: #ede3de;
-  border: 2px solid #e7e7e7;
-  border-radius: 0;
-  padding: 18px;
-  margin-top: 2em;
-  margin-bottom: 3em;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  max-width: 100vh;
+  border: 2px solid #ff0;
 }
 
-.fade-in {
-  opacity: 0;
-  opacity: 1 \9;
-  -webkit-animation: fadeIn ease-in 1;
-  animation: fadeIn ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
-
-.fade-in.text {
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.fade-in.text2 {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-.fade-in.text3 {
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-}
-
-.carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: #000;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .block-divider {
@@ -901,7 +905,14 @@ footer {
   }
 }
 
-.hideme {
-  opacity: 0;
-}
+/*==============================================
+            Media Queries Styles
+===============================================*/
+/*== 1920px Media Queries Styles ==*/
+/*== 1440px Media Queries Styles ==*/
+/*== 1024px Media Queries Styles ==*/
+/*== 768px Media Queries Styles ==*/
+/*== 425px Media Queries Styles ==*/
+/*== 375px Media Queries Styles ==*/
+/*== 320px Media Queries Styles ==*/
 /*# sourceMappingURL=style.css.map */

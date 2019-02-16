@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style>
 	#mc_embed_signup{background:none; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
@@ -145,67 +146,85 @@
                 </nav>
 
  <!-- Carousel snd Jumbotron-->
- <div id="headerImages" class="carousel slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#headerImages" data-slide-to="0" class="active"></li>
-          <li data-target="#headerImages" data-slide-to="1"></li>
-          <li data-target="#headerImages" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-interval="true hover 20000">
-            <img src="assets/images/header/main-header.png" class="d-block vh-100" alt="...">
-            <div class="carousel-caption">
-            <h1 class="fade-in text">Want To Learn Code?</h1>
-            <h4 class="fade-in text2">Get Empowered. Start Now.</h4>
-            <a class="btn fade-in text3" href="https://thecodingsessions.teachable.com/">Enrol</a>
-        </div>
-
+ <header class="content">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+       <div class="carousel-item active">
+          <img src="assets/images/header/main-header.jpg" class="d-block vw-100" alt="...">
+         <div class="gradient"></div>
+         <div class="carousel-caption">
+            <h1>Hello and welcome to jumper</h1>
+            <h2>kickass wordpress agency theme</h2>
+            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</h5>
+            <a class="btn btn-primary" href="#" role="button">get started</a>
           </div>
-          <div class="carousel-item" data-interval="true hover 20000">
-            <img src="assets/images/header/main-header-two.png" class="d-block vh-100" alt="...">
-            <div class="carousel-caption">
-                    <h1 class="fade-in text">Get Mentored</h1>
-            <h4 class="fade-in text2">Enquire Now.</h4>
-            <a class="btn fade-in text3" href="https://thecodingsessions.com.au/1-1-mentorship.html">Apply</a>
-                  </div>
         </div>
-          <div class="carousel-item" data-interval="true hover 20000">
-            <img src="assets/images/header/main-header-three.png" class="d-block vh-100" alt="...">
-             <div class="carousel-caption">
-                <h1 class="fade-in text">Make Connections</h1>
-                <h4 class="fade-in text2">Join Our Community.</h4>
-                <a class="btn fade-in text3" href="https://www.facebook.com/groups/thecodingsessions/">Join</a>
-             </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+       <div class="carousel-item">
+         <img src="assets/images/header/main-header-two.jpg" class="d-block vw-100" alt="...">
+         <div class="gradient"></div>
+         <div class="carousel-caption">
+            <h1>Hello and welcome to jumper</h1>
+            <h2>kickass wordpress agency theme</h2>
+            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</h5>
+            <a class="btn btn-primary" href="#" role="button">get started</a>
+          </div>
         </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+       <div class="carousel-item">
+         <img src="assets/images/header/main-header-three.jpg" class="d-block vw-100" alt="...">
+         <div class="gradient"></div>
+         <div class="carousel-caption">
+            <h1>Hello and welcome to jumper</h1>
+            <h2>kickass wordpress agency theme</h2>
+            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</h5>
+            <a class="btn btn-primary" href="#" role="button">get started</a>
+          </div>
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
 
 
               <!-- What is The Coding Sessions-->
               <section class="container-fluid philosophies-bg">
-                <div class="row hideme">
+                <div class="row">
                     <div class="col-xl">
                             <h2 class="main-header">What is the coding sessions?</h2>
                             <hr class="block-divider-main">
                     </div>
                 </div>
             <div class="row mt-5">
-            <div class="col-xl hideme">
+            <div class="col-xl">
                     <i class="fas fa-book-open uppercase philosophies-icon"></i>
                     <h5 class="main-header uppercase">What</h5>
                     <p>We enable transformation through empowering women to learn how to code.</p>
             </div>
-            <div class="col-xl hideme">
+            <div class="col-xl">
                     <i class="fas fa-code uppercase philosophies-icon"></i>
                     <h5 class="main-header uppercase">Who</h5>
                     <p>We are for Women. Women who aspire to be innovators. Women who aspire to be creators. Women who empower other Women. </p>
             </div>
-            <div class="col-xl hideme">
+            <div class="col-xl">
                     <i class="fas fa-laptop uppercase philosophies-icon"></i>
                     <h5 class="main-header uppercase">Where</h5>
                     <p>Being online based means we can reach and inspire more women.</p>
                 </div>
-                <div class="col-xl hideme">
+                <div class="col-xl">
                         <i class="fas fa-chalkboard-teacher uppercase philosophies-icon"></i>
                         <h5 class="main-header uppercase">Why</h5>
                         <p>An online space for women to learn how to code, means more opportunities for women to empower women in a male dominated sector.</p>
@@ -223,7 +242,7 @@
 <div class="col-xl aboutus-bg">
         </div>
 <!-- Col 2-->  
-<div class="col-xl about-us-col-padding hideme">
+<div class="col-xl about-us-col-padding">
 <h2 class="main-header-left uppercase">All about that code...</h2>
 <p>The Coding Sessions is about inspiring women to learn and love code.</p>
 <a href="/who-we-are.html" class="btn btn-light uppercase mt-5">Read More</a>
@@ -233,7 +252,7 @@
 <div class="col-xl meetalee-bg">
 </div>
 <!-- Col 4-->
-<div class="col-xl about-us-col-padding hideme">
+<div class="col-xl about-us-col-padding">
 <h2 class="main-header-left uppercase">Behind The Code</h2>
 <p>Meet Alee, the founder and CEO of The Coding Sessions</p>
     <a href="/about-alee.html" class="btn btn-light uppercase mt-5">Meet the Founder</a>
@@ -243,22 +262,22 @@
 
               <!-- Our Courses-->
               <section class="container-fluid philosophies-bg">
-                <div class="row hideme">
+                <div class="row">
                     <div class="col-md">
                             <h2 class="main-header">Featured Courses</h2>
                             <hr class="block-divider-main">
                     </div>
                 </div>
             <div class="row mt-5">
-            <div class="col-xl hideme">
+            <div class="col-xl">
                 <a href="https://thecodingsessions.teachable.com/p/build-your-website-with-wordpress-the-ultimate-course-for-kick-ass-female-entrepreneurs">
                         <img src="assets/images/course-images/buildyourwebsitewithwordpress.jpg" class="img-fluid colhover" alt="..."></a>
                 </div>
-            <div class="col-xl hideme">
+            <div class="col-xl">
                 <a href="https://thecodingsessions.teachable.com/p/how-you-can-use-css-to-spruce-up-your-wordpress-theme">
                         <img src="assets/images/course-images/cssandwordpress.jpg" class="img-fluid colhover" alt="..."></a>
         </div>
-            <div class="col-xl hideme">
+            <div class="col-xl">
                 <a href="https://thecodingsessions.teachable.com/p/learn-html-for-beginners">
                         <img src="assets/images/course-images/htmlforbeginnersteachable.png" class="img-fluid colhover" alt="..."></a>
         </div>
@@ -273,7 +292,7 @@
 
 <section class="container-fluid features-container">
         <!-- Row -->
-        <div class="row hideme">
+        <div class="row">
                 <div class="col">
                         <h2 class="main-header-left mb-5">Services</h2>
                 </div>
@@ -281,18 +300,18 @@
                     <div class="row row-grid">
 
                             <!-- Col 1-->
-     <div class="col-sm-4 hideme colhover btn-position">
+     <div class="col-sm-4 colhover btn-position">
        <img class="img-fluid frontimage" src="assets/images/column-background/learncodeimg.png" alt="Learning">
        <a href="https://thecodingsessions.teachable.com/" target="_blank" class="btn btn-light-feature uppercase mt-5">Learning</a>
 </div>
                               <!-- Col 2-->
-    <div class="col-sm-4 hideme colhover btn-position">
+    <div class="col-sm-4 colhover btn-position">
             <img class="img-fluid frontimage" src="assets/images/column-background/mentorshipimg.png" alt="Mentorship">
             <a href="/1-1-mentorship.html" class="btn btn-light-feature uppercase mt-5">1:1</a>
     </div>
 
     <!-- Col 3-->
-    <div class="col-sm-4 hideme colhover btn-position">
+    <div class="col-sm-4 colhover btn-position">
             <img class="img-fluid frontimage" src="assets/images/column-background/fbcommunityimg.png" alt="FB Community">
             <a href="https://www.facebook.com/groups/thecodingsessions/" target="_blank" class="btn btn-light-feature uppercase mt-5">Group</a>
                         </div>
@@ -304,7 +323,7 @@
 
 <!-- Subscribe -->
 <section class="container-fluid subscribe-bg">
-        <div class="row hideme">
+        <div class="row">
             <div class="col">
                     <h2 class="main-header uppercase">Subscribe to Our Mailing List!</h2>
                     <hr class="block-divider-main mb-5">
@@ -338,7 +357,7 @@
 <footer class="container-fluid" id="follow">
     <!-- Heading -->
     <section>
-        <div class="row justify-content-center hideme">
+        <div class="row justify-content-center">
             <h2 class="main-header-left mb-5">Follow on Insta @thecodingsessions</h2>
          </div>
     </section>
@@ -347,19 +366,19 @@
         <!-- Instagram -->
         <div class="container mb-5">
         <div class="row">
-                <div class="col-md hideme colhover">
+                <div class="col-md colhover">
                         <a href="https://www.instagram.com/p/BsSawxCBlEG/" target="_blank"><img class="responsive frontimage"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/4412202d5284c3e31348bc4c83dc2739/5CB45B98/t51.2885-15/e35/47693026_135370984147259_4533155092066074628_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
-                <div class="col-md hideme colhover">
+                <div class="col-md colhover">
                         <a href="https://www.instagram.com/p/BsRmMWZB-g7/" target="_blank"><img class="responsive frontimage2"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/181839a6dead13c1ffee2bd743da0da2/5CB65DB8/t51.2885-15/e35/47693854_2043857169038294_4105609259165760102_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
-                <div class="col-md hideme colhover">
+                <div class="col-md colhover">
                         <a href="https://www.instagram.com/p/BsRlyVah_fB/" target="_blank"><img class="responsive frontimage"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/8bce221635b26b68fbef3b63f591ee12/5CD542B6/t51.2885-15/e35/49858234_533332657149212_4180194724645293659_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
-                <div class="col-md hideme colhover">
+                <div class="col-md colhover">
                         <a href="https://www.instagram.com/p/BsRla_uh7Nr/" target="_blank"><img class="responsive frontimage2"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/0b6bec3ddbdcb9c84ba77ca2649479ff/5CCF370C/t51.2885-15/e35/47691092_1214121432083956_1397772182755266995_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
 
                 </div>
@@ -383,15 +402,6 @@
 
   </footer>
 
-  <div class="alert alert-dismissible text-center cookiealert" role="alert">
-        <div class="cookiealert-container">
-          <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>
-
-          <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
-              I agree
-          </button>
-        </div>
-      </div>
   <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-circle-up"></i></a>
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -399,20 +409,16 @@
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@4.0.0/dist/simpleParallax.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
-<script src="assets/js/cookiealert.js"></script>
-<!-- cookiealert.css -->
-<link rel="stylesheet" href="assets/css/cookiealert.css">
   <script>
-                        /* Open the sidenav */
-                        function openNav() {
-                          document.getElementById("mySidenav").style.width = "100%";
-                        }
+      /* Open the sidenav */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
 
-                        /* Close/hide the sidenav */
-                        function closeNav() {
-                          document.getElementById("mySidenav").style.width = "0";
-                        }</script>
+      /* Close/hide the sidenav */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }</script>
 </body>
 
 </html>
