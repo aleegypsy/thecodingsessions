@@ -2,8 +2,8 @@ $color_1: #8d8a8a;
 $color_2: rgb(255, 255, 255);
 $color_3: rgb(94, 94, 94);
 $color_4: #b3a2a2;
-$color_5: #b9b9b7;
-$color_6: #c7abab;
+$color_5: #9d869e;
+$color_6: #be9fc0;
 $color_7: #a18da5;
 $color_8: #bbb6c1;
 $color_9: grey;
@@ -13,9 +13,9 @@ $color_12: #BAB5AC;
 $color_13: #f1f1f1;
 $color_14: #cac8d4;
 $color_15: #cacaca;
-$color_16: #252525;
+$color_16: #7cc5ca;
 $color_17: rgb(214, 205, 205);
-$color_18: #000000;
+$color_18: #7cc5ca;
 $color_19: rgb(196, 185, 185);
 $color_20: #dbc7bd;
 $color_21: #ffffff;
@@ -26,7 +26,7 @@ $font_family_3: 'Nunito Sans', sans-serif;
 $background_color_1: rgb(233, 229, 225);
 $background_color_2: transparent;
 $background_color_3: rgb(89, 89, 89);
-$background_color_4: rgb(41, 40, 40);
+$background_color_4: rgb(0, 0, 0);
 $background_color_5: #000000;
 $background_color_6: #BAB5AC;
 $background_color_7: rgba(5, 5, 5, 0.932);
@@ -50,6 +50,7 @@ body {
 	text-align: center;
 	color: $color_1;
 	height: 100%;
+	background-color: $background_color_5;
 }
 html {
 	height: 100%;
@@ -179,7 +180,9 @@ main {
 	color: $color_9 !important;
 	text-transform: uppercase;
 }
-
+/*==============================
+      // Forms //
+==============================*/
 input[type=text] {
 	background-color: $background_color_1;
 	border-style: solid;
@@ -266,6 +269,9 @@ input[name=secret] {
 		}
 	}
 }
+/*==============================
+      // Navbar //
+==============================*/
 .navbar-bg {
 	background-color: $background_color_2;
 	border: 0;
@@ -350,7 +356,7 @@ button {
 		padding: 8px 8px 8px 32px;
 		text-decoration: none;
 		font-size: 25px;
-		color: $color_12;
+		color: $color_5;
 		display: block;
 		transition: 0.3s;
 		&:hover {
@@ -380,7 +386,7 @@ button {
 }
 
 /*==============================
-      // carousel Styles //
+      // Carousel //
 ==============================*/
 header {
 
@@ -398,21 +404,24 @@ header {
 			position: relative;
 		}
 		h1 {
-			font-size: 46px;
+			color: $color_5;
+			font-size: 50px;
 			font-weight: 700;
 			letter-spacing: -2px;
 			padding-bottom: 15px;
 			text-transform: uppercase;
 		}
 		h2 {
-			font-size: 28px;
+			color: $color_19;
+			font-size: 30px;
 			font-weight: 500;
 			letter-spacing: 1px;
 			padding-bottom: 30px;
 			text-transform: uppercase;
 		}
 		h5 {
-			font-size: 15px;
+			color: $color_14;
+			font-size: 17px;
 			font-weight: 400;
 			letter-spacing: 0.5px;
 			line-height: 30px;
@@ -420,9 +429,9 @@ header {
 		}
 	}
 	.gradient {
-		background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.486) 0%, rgba(8, 8, 8, 0.5) 100%);
-		background: -webkit-linear-gradient(-45deg, rgba(211, 71, 192, 0.5) 0%,rgba(99, 103, 128, 0.5) 100%);
-		background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.527) 100%);
+		background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.486) 0%, rgba(8, 8, 8, 0.747) 100%);
+		background: -webkit-linear-gradient(-45deg, rgba(211, 71, 192, 0.616) 0%,rgba(99, 103, 128, 0.5) 100%);
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.363) 0%,rgba(0, 0, 0, 0.829) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80bf0019', endColorstr='#8000159e',GradientType=1 );
 		position: absolute;
 		z-index: 99;
@@ -446,8 +455,6 @@ header {
 			margin-right: 7px;
 			margin-left: 7px;
 			background-color: rgb(146, 139, 139);
-
-
 		}
 	}
 	.carousel-caption {
@@ -461,37 +468,37 @@ header {
 		margin: auto;
 		z-index: 999;
 	}
-	.btn-primary {
-		color: #2e3192;
+	.btn-main {
+		background-color: $background_color_2;
+		color: $color_10;
 		font-weight: 700;
 		font-size: 18px;
-		padding: 15px 35px;
-		border-radius: 100px;
-		background-color: #ffffff;
-		border-color: #ffffff;
-		border: 2px solid #fff;
+		padding: 20px 35px;
+		border-radius: 0px;
+		border: 2px solid #e7e7e7;
 		text-transform: uppercase;
 		&:hover {
-			color: #ff0;
-			border-color: #ff0;
-			background-color: transparent;
-			border: 2px solid #ff0;
+			background-color: $background_color_2;
+			color: $color_10;
+			transition: all 0.35s ease-in-out;
+			-moz-transition: all 0.35s ease-in-out;
+			-webkit-transition: all 0.35s ease-in-out;
+			-o-transition: all 0.35s ease-in-out;
 		}
 	}
 }
-.btn-primary {
-	&:not(:disabled) {
-		&:not(.disabled) {
-			&:active {
-				color: #000;
-				background-color: transparent;
-				border-color: transparent;
-			}
+.btn-main {
+
+	&:active {
+		&:focus {
+			background-color: $background_color_2;
+			background-color: $background_color_3;
 		}
 	}
 }
-
-
+/*==============================
+      // What is CS //
+==============================*/
 .block-divider {
 	width: 75px;
 	height: 5px;
@@ -499,15 +506,19 @@ header {
 	background-color: $background_color_9;
 }
 .philosophies-bg {
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
 	padding: 95px 90px 95px 90px;
 	color: $color_15;
 }
 .philosophies-icon {
-	font-size: 120px;
+	font-size: 100px;
 	color: $color_16;
 	padding: 40px;
 }
+
+/*==============================
+      // About //
+==============================*/
 .about-us-col-bg-0 {
 	background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
 	-webkit-background-size: cover;
@@ -523,7 +534,7 @@ header {
 	background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
 }
 .meetalee-bg {
-	background: url('../images/column-background/meetaleethefounder.png') no-repeat center center;
+	background: url('../images/column-background/meetaleethefounder.jpg') no-repeat center center;
 	height: 50vh;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -531,7 +542,7 @@ header {
 	background-size: cover;
 }
 .aboutus-bg {
-	background: url('../images/column-background/aboutuscolimg.png') no-repeat center center;
+	background: url('../images/column-background/aboutuscolimg.jpg') no-repeat center center;
 	height: 50vh;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -546,8 +557,12 @@ header {
 	width: 100%;
 	background-color: $background_color_10;
 }
+
+/*==============================
+      // Who We Are //
+==============================*/
 .whoweareheader {
-	background: url('../images/container-background/who-we-are-header.jpg') no-repeat center center;
+	background: url('../images/container-background/aboutusheader.jpg') no-repeat center center;
 	height: 70vh;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -562,7 +577,7 @@ header {
 	margin-top: 6em;
 }
 .whowearecontainergrey {
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
 	padding: 120px 40px 95px 40px;
 	margin-top: -7em;
 }
@@ -587,7 +602,7 @@ header {
 	color: $color_18;
 }
 .aboutaleeheader {
-	background: url('../images/container-background/aleeabout.jpg') no-repeat center center;
+	background: url('../images/container-background/thefounderheader.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -609,24 +624,33 @@ header {
 	font-size: 1.1em;
 }
 .aleecol {
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
 	padding: 100px 40px 95px 40px;
 	margin-top: -9em;
 }
 .aleecol2 {
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
 	padding: 100px 40px 100px 40px;
 	color: $color_17;
 	font-size: 1.1em;
-	margin-top: -1em;
 }
 .aleecol3 {
 	background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
-	padding: 95px 40px 150px 40px;
-	margin-top: -1em;
+	padding: 55px 40px 55px 40px;
 }
+.aleepic1-bg {
+	background: url('../images/container-background/aleecolpic2.jpg') no-repeat center center;
+	height: 65vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/*==============================
+      // Mentorship //
+==============================*/
 .mentorshipheader {
-	background: url('../images/container-background/mentorship-main-pic.jpg') no-repeat center center;
+	background: url('../images/container-background/mentorshipheader.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -637,29 +661,29 @@ header {
 .mentorship-container {
 	background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
 	padding: 95px 40px 100px 40px;
-	margin-top: -1em;
+}
+.mentorship-container1 {
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
+	padding: 95px 40px 100px 40px;
+	margin-top: -10em;
 }
 .mentorship-container2 {
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
-	padding: 150px 40px 95px 40px;
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
+	padding: 95px 40px 95px 40px;
 	color: $color_19;
-	margin-top: -15em;
 }
 .mentorship-container3 {
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
-	padding: 100px 40px 90px;
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
 	color: $color_19;
-	margin-top: -1em;
+	padding: 80px 40px 80px 40px;
 }
 .mentorship-container4 {
 	background-image: linear-gradient(135deg, rgb(24, 24, 24), rgb(0, 0, 0));
-	padding: 95px 40px 350px 40px;
-	margin-top: -1em;
+	padding: 80px 40px 80px 40px;
 }
 .mentorship-content {
 	text-align: center;
 	padding: 20px;
-	font-size: 1.1em;
 }
 .mentorship-content2 {
 	padding: 20px;
@@ -678,6 +702,27 @@ header {
 	padding: 20px;
 	font-size: 1.7em;
 }
+.aleementorshippic-bg {
+	background: url('../images/container-background/aleementorship.jpg') no-repeat center center;
+	height: 60vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.aleementorshippic1-bg {
+	background: url('../images/container-background/aleementorship2.jpg') no-repeat center center;
+	height: 75vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*==============================
+      // Features //
+==============================*/
 .features {
 	background-color: $background_color_11;
 	padding: 95px 40px 95px 40px;
@@ -688,7 +733,7 @@ header {
 	margin-top: -1.5em;
 }
 .btn-light-feature {
-	background-color: $background_color_2;
+	background-color: $background_color_5;
 	color: $color_10;
 	border: 2px solid #e7e7e7;
 	border-radius: 0px;
@@ -737,10 +782,14 @@ header {
 		-o-transition: all 0.35s ease-in-out;
 	}
 }
+
+/*==============================
+      // Subscribe //
+==============================*/
 .subscribe-bg {
 	padding: 105px 40px 105px 40px;
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
-	color: $color_5;
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
+	color: $color_19;
 	margin-top: -1em;
 	margin-bottom: -1em;
 }
@@ -749,12 +798,16 @@ header {
 	background-color: $background_color_12;
 }
 .subscribe-free-gift {
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 .contact-content-container {
 	padding: 95px 60px 95px 60px;
-	background-image: linear-gradient(135deg, rgb(161, 150, 150), #111);
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
 }
+
+/*==============================
+      // Contact //
+==============================*/
 .contact-content {
 	padding: 30px;
 	text-align: center;
@@ -767,7 +820,7 @@ header {
 	word-wrap: break-word;
 }
 .contact-page {
-	background: url('../images/container-background/contactbackground.jpg') no-repeat center center;
+	background: url('../images/container-background/contactusheader.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -789,6 +842,10 @@ header {
 	transform-origin: 0 0 !important;
 	-webkit-transform-origin: 0 0 !important;
 }
+
+/*==============================
+      // Footer //
+==============================*/
 footer {
 	background-color: $background_color_5;
 	margin: 0;
@@ -866,6 +923,10 @@ footer {
 		}
 	}
 }
+
+/*===================================
+      // Various Media Queries //
+=====================================*/
 @media (max-width: 1024px) {
 	.row {
 		>div {
@@ -894,14 +955,65 @@ footer {
 
 
 /*==============================================
-            Media Queries Styles
+            Carousel Media Queries Styles
 ===============================================*/
 /*== 1920px Media Queries Styles ==*/
+@media screen and (max-width: 1920px) {
+	header .carousel-item img {width: 100vh;}
+}
 /*== 1440px Media Queries Styles ==*/
+@media screen and (max-width: 1440px) {
+	header .carousel-caption {width: 70%;}
+	header .carousel-item img {height:800px;}
+}
 /*== 1024px Media Queries Styles ==*/
+@media screen and (max-width: 1024px) {
+	header .carousel-item img {height: 640px;}
+	header .carousel-item h3{font-size: 16px;padding: 15px 40px;letter-spacing: 0.5px; padding-bottom: 15px;}
+	header .carousel-caption {width: 75%;}
+	header .carousel-item h1 {font-size: 40px;padding-bottom: 10px;font-weight: 600;letter-spacing: -1px;}
+	header .carousel-item h2{font-size: 22px; padding-bottom: 20px;letter-spacing: 0.5px;}
+	header .carousel-item h5{font-size: 14px;padding-bottom: 25px;line-height: 24px;}
+	header .btn-main {font-size: 14px;padding: 10px 18px;font-weight: 600;}
+	header .carousel-indicators li {width: 25px;
+		height: 25px;
+		border-radius: 50%;}
+}
 /*== 768px Media Queries Styles ==*/
+@media screen and (max-width: 768px) {
+
+	header .carousel-control-next, .carousel-control-prev {top: 20%;}
+	header .carousel-caption {top: 70%;}
+	header .carousel-item h3 {font-size: 14px;padding: 15px 30px;}
+	header .carousel-item h1 {font-size: 36px;}
+	header .carousel-item h2 {font-size: 18px;}
+	header .carousel-item h5 {font-size: 12px;line-height: 20px;}
+}
 /*== 425px Media Queries Styles ==*/
+@media screen and (max-width: 425px) {
+	header .carousel-item h3 {font-size: 12px;padding: 10px 20px;}
+	header .carousel-item h1 {font-size: 22px;padding-bottom: 5px;}
+	header .carousel-item h2 {font-size: 14px;padding-bottom: 15px;letter-spacing: 0px;}
+	header .btn-main {font-size: 12px;padding: 7px 10px;font-weight: 600;}
+	header .carousel-item img {height: 570px;}
+	header .carousel-indicators {display:none;}
+}
 /*== 375px Media Queries Styles ==*/
+@media screen and (max-width: 375px) {
+	.top-container .col2 .fa {width: 25px;height: 25px;padding: 7px 0;}
+	header .carousel-item h1{font-size: 20px;}
+	header .carousel-item h2 {font-size: 12px;padding-bottom: 10px;letter-spacing: 0px;}
+	header .carousel-item img {height: 520px;}
+	footer .footer-copyright p {padding: 10px 5px;margin-bottom: 0;}
+	header .carousel-caption {top: 77%;}
+	header .carousel-item h3 {margin-bottom: 10px;}
+	header .carousel-indicators {display:none;}
+	header .btn-main {padding: 5px 10px;}
+	header .carousel-control-next, .carousel-control-prev {top: 25%;}
+}
 /*== 320px Media Queries Styles ==*/
-
-
+@media screen and (max-width: 320px) {
+	.top-container .col2 .fa {width: 23px;height: 23px;padding: 7px 0;font-size: 11px;}
+	header .carousel-item h3 {font-size: 11px;padding: 10px 10px;}
+	header .carousel-item h5 {line-height: 15px;padding-bottom: 16px;}
+}
