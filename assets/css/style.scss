@@ -28,7 +28,7 @@ $background_color_2: transparent;
 $background_color_3: rgb(89, 89, 89);
 $background_color_4: rgb(0, 0, 0);
 $background_color_5: #000000;
-$background_color_6: #BAB5AC;
+$background_color_6: #EBEBEB;
 $background_color_7: rgba(5, 5, 5, 0.932);
 $background_color_8: rgb(0, 0, 0);
 $background_color_9: #e5cdce;
@@ -43,7 +43,7 @@ $border_color_1: #ffffff;
  * Created by The Coding Sessions
  */
  @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,500,600,700|Nunito+Sans:300,400,500,600,700|Shadows+Into+Light:100,200,300,400,500,600,700|Pavanam:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
- @import url(assets/css/owl.carousel.css);
+
 
 body {
 	font-family: $font_family_1;
@@ -111,6 +111,9 @@ main {
 			top: 5px;
 		}
 	}
+}
+.privacy-policy-alignment {
+	text-align: left;
 }
 .main-header-big {
 	color: $color_4;
@@ -342,36 +345,66 @@ button {
 		-o-transition: all 0.35s ease-in-out;
 	}
 }
-.sidenav {
-	height: 100%;
-	width: 0;
+.navbar-toggler {
+	cursor: pointer;
+	&:hover {
+		cursor: pointer;
+	}
+}
+.overlay {
+	height: 0%;
+	width: 100%;
 	position: fixed;
 	z-index: 1;
 	top: 0;
-	right: 0;
-	background-color: $background_color_7;
-	overflow-x: hidden;
+	left: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-y: hidden;
 	transition: 0.5s;
-	padding-top: 60px;
+	-moz-transition: 0.5s;
 	a {
-		padding: 8px 8px 8px 32px;
+		padding: 8px;
 		text-decoration: none;
-		font-size: 25px;
-		color: $color_5;
+		font-size: 36px;
+		color: #818181;
 		display: block;
 		transition: 0.3s;
 		&:hover {
-			color: $color_13;
+			color: #f1f1f1;
+		}
+		&:focus {
+			color: #f1f1f1;
 		}
 	}
 	.closebtn {
 		position: absolute;
-		top: 0;
-		right: 25px;
-		font-size: 36px;
-		margin-left: 50px;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
 	}
 }
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+@media screen and (max-height: 450px) {
+	.overlay {
+		overflow-y: auto;
+		a {
+			font-size: 20px;
+		}
+		.closebtn {
+			font-size: 40px;
+			top: 15px;
+			right: 35px;
+		}
+	}
+}
+
 .navbar-toggler {
 	&:hover {
 		opacity: 0.6;
@@ -720,6 +753,13 @@ header {
 	background-size: cover;
 }
 
+
+.courses-container {
+	background-image: linear-gradient(135deg, rgb(105, 32, 107), rgb(26, 62, 68), #111);
+	padding: 90px 40px 90px 40px;
+	margin-top: -1.5em;
+}
+
 /*==============================
       // Features //
 ==============================*/
@@ -924,43 +964,87 @@ footer {
 	}
 }
 
-.instagram-feed-area {
-	position: relative;
-	z-index: 1;
-	.insta-title {
-			text-align: center;
-			h5 {
-					margin-bottom: 0;
-					padding: 40px 0;
-					font-size: 18px;
-			}
+/*------------------
+  Course section
+---------------------*/
+
+.course-item {
+	margin-bottom: 30px;
+	.course-thumb {
+		height: 270px;
 	}
-	.single-insta-feed {
-			position: relative;
-			z-index: 1;
-			clear: both;
-			.hover-effects {
-					a {
-							display: block;
-							font-size: 30px;
-							position: absolute;
-							width: 100%;
-							height: 100%;
-							top: 0;
-							left: 0;
-							z-index: 10;
-							background-color: rgba(48, 51, 107, 0.95);
-							opacity: 0;
-							visibility: hidden;
-					}
+	.course-info {
+		background: rgba(5, 5, 5, 0.932);
+		color: #b9b3b3;
+		.course-text {
+			padding: 45px 33px 25px;
+			h5 {
+				margin-bottom: 5px;
+				text-transform: uppercase;
+				color: #be9fc0;
+				font-family: $font_family_2;
+				font-weight: bold;
 			}
-			&:hover .hover-effects a,
-			&:focus .hover-effects a {
-					opacity: 1;
-					visibility: visible;
+			a{
+				&:hover{
+					text-decoration: none;
+				}
 			}
+		}
+		.course-author {
+			padding: 14px 33px;
+			overflow: hidden;
+			.ca-pic {
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				float: left;
+			}
+			p {
+				padding-left: 60px;
+				margin-bottom: 0;
+				padding-top: 7px;
+				font-weight: 600;
+				span {
+					color: #e9c9dd;
+				}
+			}
+		}
 	}
 }
+.course-item.featured-course {
+	position: relative;
+	margin-bottom: 97px;
+	&:last-child {
+		margin-bottom: 30px;
+	}
+	&:nth-child(2n) {
+		.course-thumb {
+			left: auto;
+			right: 0;
+		}
+	}
+	.course-thumb {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+	.course-info {
+		.course-text {
+			padding: 70px 33px 25px;
+			h5 {
+				margin-bottom: 20px;
+			}
+		}
+		.course-author {
+			border-top: none;
+			padding: 14px 33px 60px;
+		}
+	}
+}
+
 
 /*===================================
       // Various Media Queries //
@@ -1039,8 +1123,9 @@ footer {
 /*== 375px Media Queries Styles ==*/
 @media screen and (max-width: 375px) {
 	.top-container .col2 .fa {width: 25px;height: 25px;padding: 7px 0;}
-	header .carousel-item h1{font-size: 25px;}
-	header .carousel-item h2 {font-size: 12px;padding-bottom: 10px;letter-spacing: 0px;}
+	header .carousel-item h1{font-size: 30px;
+	margin-top: -2em;}
+	header .carousel-item h2 {font-size: 18px;padding-bottom: 10px;letter-spacing: 0px;}
 	header .carousel-item img {height: 520px;}
 	footer .footer-copyright p {padding: 10px 5px;margin-bottom: 0;}
 	header .carousel-caption {top: 77%;}

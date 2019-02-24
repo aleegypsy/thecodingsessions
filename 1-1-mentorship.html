@@ -85,45 +85,49 @@
         <!--With some Bootstrap properties -->
         <nav class="navbar navbar-bg1 fixed-top">
             <a class="navbar-brand" href="https://www.thecodingsessions.com.au">
-                    <img alt="Logo" src="assets/images/logo/codingsessionsnewlogo.png" style="height: 40px;">
-                </a>   
-<button class="navbar-toggler" type="button">
-            <div class="container" onclick="openNav()">
-                            <div class="menu"></div>
-                            <div class="menu"></div>
-                            <div class="menu"></div>
-                          </div>
-</button>
-<div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <ul class="list-inline">
-                            <li class="nav-item">
-                            <a class="nav-link" href="/who-we-are.html">About</a>
-                            </li> 
-                            <li class="nav-item">
-                             <a class="nav-link" href="/about-alee.html">The Founder</a>
-                            </li> 
-                            <li class="nav-item">
-                            <a class="nav-link" href="/1-1-mentorship.html">1:1 Mentorship</a>
-                          </li>    
-                          <li class="nav-item">
-                            <a class="nav-link" href="https://thecodingsessions.teachable.com/">Courses</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="/contact.html">Contact</a>
-                          </li> 
-                        </ul>
-                        <ul class="list-inline d-flex justify-content-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.facebook.com/thecodingsessions" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            </li> 
-                            <li class="nav-item">
-                                 <a class="nav-link" href="https://www.instagram.com/thecodingsessions" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a>
-                            </li> 
-                        </ul>
-          </div>
+                <img alt="Logo" src="assets/images/logo/codingsessionsnewlogo.png" style="height: 80px;">
+            </a>
+                <div class="navbar-toggler">
+                    <div class="container">
+                        <span onclick="openNav()">
+                                      <div class="menu"></div>
+                                      <div class="menu"></div>
+                                      <div class="menu"></div>
+                                    </span>
+                                    </div>
+                                  </div>
+<div id="myNav" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div class="overlay-content">
+<ul class="list-inline">
+                      <li class="nav-item">
+                      <a class="nav-link" href="/who-we-are.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                       <a class="nav-link" href="/about-alee.html">The Founder</a>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="/1-1-mentorship.html">1:1 Mentorship</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://thecodingsessions.teachable.com/">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                  </ul>
+                  <ul class="list-inline d-flex justify-content-center">
+                      <li class="nav-item">
+                          <a class="nav-link" href="https://www.facebook.com/thecodingsessions" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      </li>
+                      <li class="nav-item">
+                           <a class="nav-link" href="https://www.instagram.com/thecodingsessions" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a>
+                      </li>
+                  </ul>
+                </div>
+    </div>
 </nav>
-        
+
  <!--Header-->               
     <div class="diagonalsection mentorshipheader whoweareheadersection container-fluid">
     </div>
@@ -282,8 +286,8 @@
                     </ul>
                     <h2 class="main-header uppercase">What you'll invest</h2>
                     <hr class="block-divider-main mb-5">
-                    <p class="mentorship-content4"><strong>$2500 USD</strong> or 3 monthly payments of <u>$833</u> USD.</p>
-                    <p class="mentorship-content">*Discount available when paying in full</p>
+                    <p class="mentorship-content4"><strong>$1500 USD</strong>
+                    <p class="mentorship-content">*Monthly Payment Plans available. Contact me to find out more.</p>
                     <p class="whatwedo-content container">What if you decided that today, you are going to take action, stop making excuses, and take a leap into creating your dream life?! <em>Imagine</em>
                         where you could be in 6 or 12 months from now.</p>
                     
@@ -406,7 +410,7 @@
                 <!-- Copyright -->
     <div class="row col-sm justify-content-center">
         <div class="copyright">
-            <p class="uppercase">© 2019 Site Created By <a class="copyright2" target="_blank" href="https://www.thecodingsessions.com.au/">The Coding Sessions.</a></p>
+            <p class="uppercase">© 2019 Site Created By <a class="copyright2" target="_blank" href="https://www.thecodingsessions.com.au/">The Coding Sessions.</a> View Our <a class="copyright2" href="/privacy-policy.html"> Privacy Policy.</a></p>
     </div>
     </div>
 
@@ -418,17 +422,16 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/animate.js"></script>
 <script src="assets/js/custom.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script>
-  /* Open the sidenav */
   function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("myNav").style.height = "100%";
   }
 
-  /* Close/hide the sidenav */
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }</script>
-</body>
+    document.getElementById("myNav").style.height = "0%";
+  }
+  </script>
+  </body>
 </html>

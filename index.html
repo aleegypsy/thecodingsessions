@@ -8,9 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-Control" content="max-age=200" />
     <meta http-equiv="Content-Type" value="application/xhtml+xml;charset=utf-8" />
-    <meta name="description" content="The Coding Sessions empowers women to get their nerd on, and learn the art of coding. 
-    Our online educational hub offers short courses, tools and resources that encourage 
-    women to feel confident in taking their first steps into Web Development.">
+    <meta name="description" content="The Coding Sessions empowers women to embrace technology, and learn the art of coding. We provide
+    you with the tools, resources, skills, and knowledge to enable you to learn with confidence, and with a supportive network of like-minded women.">
     <meta name="google-site-verification" content="2L5jeKGc5kVgNUIHS6wjk5J1gmqCRjr3mIh-ydKdi1A" />
     <meta property="fb:app_id" content="380703092505984" />
     <meta property="og:image" content="https://thecodingsessions.com.au/assets/images/thumbnail-images/index-preview.jpg" />
@@ -18,13 +17,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.thecodingsessions.com.au" />
     <meta property="og:title" content="The Coding Sessions" />
-    <meta property="og:description" content="The Coding Sessions empowers women to get their nerd on, and learn the art of coding." />
+    <meta property="og:description" content="The Coding Sessions empowers women to embrace technology, and learn the art of coding." />
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="The Coding Sessions" />
-    <meta name="twitter:description" content="An Online Educational Hub to Help Women Learn How to Code." />
+    <meta name="twitter:description" content="The Coding Sessions empowers women to embrace technology, and learn the art of coding." />
     <meta name="twitter:url" content="https://www.thecodingsessions.com.au" />
     <meta name="twitter:image" content="https://thecodingsessions.com.au/assets/images/thumbnail-images/index-preview.jpg" />
-    <title>The Coding Sessions | An Online Educational Hub to Help Women Learn How to Code</title>
+    <title>The Coding Sessions | Empowering Women to Learn How to Code</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -37,6 +36,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/cookiealert.css">
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style>
 	#mc_embed_signup{background:none; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
@@ -96,33 +96,38 @@
         <!--With some Bootstrap properties -->
                 <nav class="navbar navbar-bg fixed-top">
                                 <a class="navbar-brand" href="https://www.thecodingsessions.com.au">
-                                        <img alt="Logo" src="assets/images/logo/codingsessionsnewlogo.png" style="height: 40px;">
-                                    </a>   
-                  <button class="navbar-toggler" type="button">
-                                <div class="container" onclick="openNav()">
-                                                <div class="menu"></div>
-                                                <div class="menu"></div>
-                                                <div class="menu"></div>
-                                              </div>
-                  </button>
-                  <div id="mySidenav" class="sidenav">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                                <ul class="list-inline">
+                                        <img alt="Logo" src="assets/images/logo/codingsessionsnewlogo.png" style="height: 80px;">
+                                    </a>
+
+                                    <div class="navbar-toggler">
+                                      <div class="container">
+                                          <span onclick="openNav()">
+                                                        <div class="menu"></div>
+                                                        <div class="menu"></div>
+                                                        <div class="menu"></div>
+                                                      </span>
+                                                      </div>
+                                                    </div>
+
+                  <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                    <ul class="list-inline">
                                                 <li class="nav-item">
                                                 <a class="nav-link" href="/who-we-are.html">About</a>
-                                                </li> 
+                                                </li>
                                                 <li class="nav-item">
                                                  <a class="nav-link" href="/about-alee.html">The Founder</a>
-                                                </li> 
+                                                </li>
                                                 <li class="nav-item">
                                                 <a class="nav-link" href="/1-1-mentorship.html">1:1 Mentorship</a>
-                                              </li>    
+                                              </li>
                                               <li class="nav-item">
                                                 <a class="nav-link" href="https://thecodingsessions.teachable.com/">Courses</a>
                                               </li>
                                               <li class="nav-item">
                                                 <a class="nav-link" href="/contact.html">Contact</a>
-                                              </li> 
+                                              </li>
                                             </ul>
                                             <ul class="list-inline d-flex justify-content-center">
                                                 <li class="nav-item">
@@ -132,6 +137,7 @@
                                                      <a class="nav-link" href="https://www.instagram.com/thecodingsessions" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a>
                                                 </li>
                                             </ul>
+                                          </div>
                               </div>
                 </nav>
 
@@ -250,32 +256,97 @@
     </div>
 
               <!-- Our Courses-->
-              <section class="container-fluid philosophies-bg column-margin">
-                <div class="row" data-aos="fade-up">
-                    <div class="col">
-                            <h2 class="main-header">Featured Courses</h2>
-                            <hr class="block-divider-main">
-                    </div>
-                </div>
-            <div class="row mt-5" data-aos="fade-up">
-            <div class="col-lg-4">
-                <a href="https://thecodingsessions.teachable.com/p/build-your-own-website-from-scratch-ultimate-course-for-girls-who-want-to-code">
-                        <img src="assets/images/course-images/buildawebsitefromscratch.jpg" class="img-fluid colhover" alt="..."></a>
-                </div>
-            <div class="col-lg-4">
-                <a href="https://thecodingsessions.teachable.com/p/coding-basics-how-to-use-html-css-to-spruce-up-your-wordpress-theme">
-                        <img src="assets/images/course-images/codingbasicsforwordpress.jpg" class="img-fluid colhover" alt="..."></a>
-        </div>
-            <div class="col-lg-4">
-                <a href="https://thecodingsessions.teachable.com/p/html-the-basics">
-                        <img src="assets/images/course-images/learnhtmlthebasics.jpg" class="img-fluid colhover" alt="..."></a>
-        </div>
-            </div>
-            <div class="row">
-                    <a class="btn btn-dark mt-5" href="https://thecodingsessions.teachable.com/" alt="...">View More</a>
-            </div>
+<!-- course section -->
+<section class="course-section container-fluid courses-container">
+    <div class="row" data-aos="fade-up">
+        <div class="col">
+            <h2 class="main-header">Featured Courses</h2>
+            <hr class="block-divider-main">
+    </div>
+</div>
+		<div class="mt-5" data-aos="fade-up">
+			<div class="row course-items-area">
+				<!-- course -->
+				<div class="mix col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="assets/images/course-images/codingbasicsforwordpress.png">
 
-            </section>
+						</div>
+						<div class="course-info">
+							<div class="course-text">
+								<a href="https://thecodingsessions.teachable.com/p/html-the-basics"><h5 class="mb-5">HTML: The Basics</h5></a>
+								<p>A course for beginners who want to take the first step into Web Development, by learning one of the core languages for building Web Pages.</p>
+							</div>
+							<div class="course-author">
+								<div class="ca-pic set-bg" data-setbg="assets/images/course-images/alee.jpg"></div>
+								<p>Alee Sang, <span>Facilitator</span></p>
+							</div>
+						</div>
+					</div>
+        </div>
+				<!-- course -->
+				<div class="mix col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="assets/images/course-images/cssthebasicssmall.png">
+						</div>
+						<div class="course-info">
+							<div class="course-text">
+								<a href="https://thecodingsessions.teachable.com/p/css-the-basics"><h5 class="mb-5">CSS: The Basics</h5></a>
+								<p>A course for beginners who want to take the first step into Web Development, by learning one of the core languages for creating and styling Web Pages.</p>
+							</div>
+							<div class="course-author">
+								<div class="ca-pic set-bg" data-setbg="assets/images/course-images/alee.jpg"></div>
+								<p>Alee Sang, <span>Facilitator</span></p>
+							</div>
+						</div>
+					</div>
+        </div>
+				<!-- course -->
+				<div class="mix col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="assets/images/course-images/buildawebsitefromscratch.png">
+
+						</div>
+						<div class="course-info">
+							<div class="course-text">
+								<a href="https://thecodingsessions.teachable.com/p/build-your-own-website-from-scratch-ultimate-course-for-girls-who-want-to-code"><h5 class="mb-5">Build Your Own Website from Scratch</h5></a>
+                <p>An epic course for aspiring Female Web Developers, teaching them how to build a Website completely from Scratch using HTML & CSS.</p>
+                <p></p>
+							</div>
+							<div class="course-author">
+								<div class="ca-pic set-bg" data-setbg="assets/images/course-images/alee.jpg"></div>
+								<p>Alee Sang, <span>Facilitator</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- course -->
+				<div class="mix col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="assets/images/course-images/learnhtmlthebasics.png">
+
+						</div>
+						<div class="course-info">
+							<div class="course-text">
+                  <a href="https://thecodingsessions.teachable.com/p/coding-basics-how-to-use-html-css-to-spruce-up-your-wordpress-theme"><h5 class="mb-5">Coding Basics: How to Use HTML & CSS to Spruce Up Your Wordpress Theme</h5></a>
+								<p>Learn what HTML & CSS is and how you can take advantage of them, to customise your Wordpress Theme.</p>
+							</div>
+							<div class="course-author">
+								<div class="ca-pic set-bg" data-setbg="assets/images/course-images/alee.jpg"></div>
+								<p>Alee Sang, <span>Facilitator</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+  </div>
+
+  <div class="row" data-aos="fade-up">
+      <a class="btn btn-dark mt-5" href="https://thecodingsessions.teachable.com/" alt="...">View More</a>
+</div>
+</div>
+	</section>
+	<!-- course section end -->
+
 
 <!-- Features -->
 
@@ -310,6 +381,7 @@
 </section>
 
 
+
 <!-- Subscribe -->
 <section class="container-fluid subscribe-bg">
         <div class="row" data-aos="fade-up">
@@ -341,7 +413,6 @@
         </div>
     </section>
 
-
 <!-- Footer -->
 <footer class="container-fluid" id="follow">
     <!-- Heading -->
@@ -351,28 +422,27 @@
          </div>
     </section>
 
-
     <!-- Instagram -->
     <div class="container mb-5">
-      <div class="row" data-aos="fade-up">
-              <div class="col-md colhover">
-                      <a href="https://www.instagram.com/p/BsSawxCBlEG/" target="_blank"><img class="responsive frontimage"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/4412202d5284c3e31348bc4c83dc2739/5CB45B98/t51.2885-15/e35/47693026_135370984147259_4533155092066074628_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
-  
-              </div>
-              <div class="col-md colhover">
-                      <a href="https://www.instagram.com/p/BsRmMWZB-g7/" target="_blank"><img class="responsive frontimage2"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/181839a6dead13c1ffee2bd743da0da2/5CB65DB8/t51.2885-15/e35/47693854_2043857169038294_4105609259165760102_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
-  
-              </div>
-              <div class="col-md colhover">
-                      <a href="https://www.instagram.com/p/BsRlyVah_fB/" target="_blank"><img class="responsive frontimage"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/8bce221635b26b68fbef3b63f591ee12/5CD542B6/t51.2885-15/e35/49858234_533332657149212_4180194724645293659_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
-  
-              </div>
-              <div class="col-md colhover">
-                      <a href="https://www.instagram.com/p/BsRla_uh7Nr/" target="_blank"><img class="responsive frontimage2"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/0b6bec3ddbdcb9c84ba77ca2649479ff/5CCF370C/t51.2885-15/e35/47691092_1214121432083956_1397772182755266995_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
-  
-              </div>
-          </div>
-      </div>
+        <div class="row" data-aos="fade-up">
+                <div class="col-md colhover">
+                        <a href="https://www.instagram.com/p/BsSawxCBlEG/" target="_blank"><img class="responsive frontimage"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/4412202d5284c3e31348bc4c83dc2739/5CB45B98/t51.2885-15/e35/47693026_135370984147259_4533155092066074628_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+    
+                </div>
+                <div class="col-md colhover">
+                        <a href="https://www.instagram.com/p/BsRmMWZB-g7/" target="_blank"><img class="responsive frontimage2"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/181839a6dead13c1ffee2bd743da0da2/5CB65DB8/t51.2885-15/e35/47693854_2043857169038294_4105609259165760102_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+
+                </div>
+                <div class="col-md colhover">
+                        <a href="https://www.instagram.com/p/BsRlyVah_fB/" target="_blank"><img class="responsive frontimage"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/8bce221635b26b68fbef3b63f591ee12/5CD542B6/t51.2885-15/e35/49858234_533332657149212_4180194724645293659_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+
+                </div>
+                <div class="col-md colhover">
+                        <a href="https://www.instagram.com/p/BsRla_uh7Nr/" target="_blank"><img class="responsive frontimage2"  alt="" src="https://instagram.fadl4-1.fna.fbcdn.net/vp/0b6bec3ddbdcb9c84ba77ca2649479ff/5CCF370C/t51.2885-15/e35/47691092_1214121432083956_1397772182755266995_n.jpg?_nc_ht=instagram.fadl4-1.fna.fbcdn.net"></a>
+
+                </div>
+            </div>
+        </div>
 
                     <!-- Social Links -->
         <div class="row col-sm justify-content-center">
@@ -385,31 +455,40 @@
                     <!-- Copyright -->
         <div class="row col-sm justify-content-center">
             <div class="copyright">
-                <p class="uppercase">© 2019 Site Created By <a class="copyright2" target="_blank" href="https://www.thecodingsessions.com.au/">The Coding Sessions.</a></p>
+                <p class="uppercase">© 2019 Site Created By <a class="copyright2" target="_blank" href="https://www.thecodingsessions.com.au/">The Coding Sessions.</a> View Our <a class="copyright2" href="/privacy-policy.html"> Privacy Policy.</a></p>
         </div>
         </div>
 
   </footer>
 
+
   <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+  <div class="alert alert-dismissible text-center cookiealert" role="alert">
+  <div class="cookiealert-container">
+      We use cookies to ensure you get the best experience on our website. <a class="copyright2" href="http://cookiesandyou.com/" target="_blank"> Learn More</a>
+
+      <button type="button" class="btn btn-light btn-sm acceptcookies" aria-label="Close">
+          Got It!
+      </button>
+  </div>
+</div>
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/animate.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/cookiealert.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script>
-  /* Open the sidenav */
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-  }
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
 
-  /* Close/hide the sidenav */
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }``
-</script>
-</body>
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+  </body>
 
 </html>
