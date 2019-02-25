@@ -1,7 +1,6 @@
 /* global $ */
 $(document).ready(function () {
 
-  
  // hide navbar on scroll
   $(function () {
     var lastScrollTop = 0;
@@ -9,34 +8,14 @@ $(document).ready(function () {
 
     $(window).scroll(function(event){
       var st = $(this).scrollTop();
-
       if (st > lastScrollTop) { // scroll down
-
-        // use this is jQuery full is used
         $navbar.fadeOut()
-
-        // use this to use CSS3 animation
-        // $navbar.addClass("fade-out");
-        // $navbar.removeClass("fade-in");
-
-        // use this if no effect is required
-        // $navbar.hide();
       } else { // scroll up
-
-        // use this is jQuery full is used
         $navbar.fadeIn()
-
-        // use this to use CSS3 animation
-        // $navbar.addClass("fade-in");
-        // $navbar.removeClass("fade-out");
-
-        // use this if no effect is required
-        // $navbar.show();
       }
       lastScrollTop = st;
     });
   });
-
 
  // transparent to solid
   $(window).scroll(function() {
@@ -48,7 +27,7 @@ $(document).ready(function () {
     }
   });
 
-  // ===== Scroll to Top ====
+  // Scroll to Top
 $(window).scroll(function() {
   if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
       $('#return-to-top').fadeIn(200);    // Fade in the arrow
@@ -62,14 +41,19 @@ $('#return-to-top').click(function() {      // When arrow is clicked
   }, 500);
 });
 
-  // ===== Background Set ====
+  // Background Set
 	$('.set-bg').each(function() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
 
-
-
+  // instafeed
+  var userFeed = new Instafeed({
+    get: 'user',
+    userId: 9973885412,
+    accessToken: '9973885412.1677ed0.39d48b8129eb485699394c2aab13468e'
+  });
+  userFeed.run();
 
 });
 
